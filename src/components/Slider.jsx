@@ -13,9 +13,9 @@ export default function Slider() {
                             <div className="container">
                                 <div className="carousel-caption relative">
                                     <div className="row d_flex">
-                                        <div className="col-lg-5 offset-lg-7 col-md-7 offset-md-5">
+                                        <div className="col-lg-5">
                                             <div className="creative">
-                                                <h1>We are help old people </h1>
+                                                <h1>We are your best friend </h1>
                                                 <p>
                                                     All the Lorem Ipsum generators on the Internet tend to
                                                     repeat predefined chunks as necessary, making this the
@@ -36,7 +36,7 @@ export default function Slider() {
                             <div className="container">
                                 <div className="carousel-caption relative">
                                     <div className="row d_flex">
-                                        <div className="col-lg-5 offset-lg-7 col-md-7 offset-md-5">
+                                        <div className="col-lg-5">
                                             <div className="creative">
                                                 <h1>We are help old people </h1>
                                                 <p>

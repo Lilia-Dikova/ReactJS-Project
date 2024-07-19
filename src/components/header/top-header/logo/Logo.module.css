@@ -2,12 +2,13 @@
   content: "Text that appears on hover";
     position: absolute;
     top: 5px;
-    left: 690px;;
+    left: 720px;;
+    bottom: 19px;
+    z-index: 100;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.4s ease;
     color: pink;
-    text-size: 10px;
 }
 
 .logo {  

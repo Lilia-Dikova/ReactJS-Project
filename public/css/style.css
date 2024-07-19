@@ -321,7 +321,7 @@ button {
 
 .header_top {
 
-    height: 59px;
+    height: 66px;
     line-height: 69px;
 
 }   
@@ -341,7 +341,7 @@ button {
 
 ul.top_info {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-evenly;
     flex-wrap: wrap;
 }
 
@@ -398,6 +398,8 @@ ul.social_icon li a i:hover {
     height: 62px;
     align-items: center;
     margin-bottom: -34px;
+    border: 1px solid #F37A1F;
+    border-radius: 25px;
 }
 
 
@@ -536,7 +538,7 @@ ul.email li a i {
 
     padding: 80px 0;
     padding-top: 10%;
-    background: url(../images/banner.png);
+    background: url(../images/banner1.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
@@ -828,7 +830,7 @@ ul.email li a i {
 }
 
 #request *::placeholder {
-    color: #1f1d14;
+    color: grey;
     opacity: 1;
 }
 
