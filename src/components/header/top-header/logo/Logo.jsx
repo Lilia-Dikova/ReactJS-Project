@@ -1,21 +1,20 @@
-import { useEffect, useState } from "react";
+import { useState } from 'react';
 import styles from './Logo.module.css'
 
 export function Logo() {
-    const logos = ['petacat','ฅ⁠^⁠•⁠ﻌ⁠•⁠^⁠ฅ', 'ฅ՞•ﻌ•՞ฅ', '🐾🤍', 'ദ്ദി（• ˕ •マ.ᐟ⁠', 'ᕱ⑅ᕱ'];
+    const logos = ['petacat', 'ฅ⁠^⁠•⁠ﻌ⁠•⁠^⁠ฅ', 'ฅ՞•ﻌ•՞ฅ', '🐾🤍', 'ദ്ദി（• ˕ •マ.ᐟ⁠', 'ᕱ⑅ᕱ'];
 
     const [number, setNumber] = useState(0);
     const [timeInterval, setTimeInterval] = useState(null);
     const [stop, setStop] = useState(false);
 
     const changeLogo = () => {
-            
+
         setTimeInterval(setInterval(() => {
-            setNumber((prev) => prev == 4 ? prev = 0 : prev + 1);
+            setNumber((prev) => prev == 5 ? prev = 0 : prev + 1);
         }, 1000));
     };
 
-  
     const pauseChangeLogo = () => {
         clearInterval(timeInterval);
     };
@@ -24,7 +23,6 @@ export function Logo() {
         setStop(!stop);
         stop ? pauseChangeLogo() : changeLogo();
     };
-
 
     return (
         <>
@@ -40,5 +38,4 @@ export function Logo() {
             </div>
         </>
     );
-
 }

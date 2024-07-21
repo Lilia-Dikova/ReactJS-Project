@@ -4,8 +4,9 @@ import Footer from './components/Footer';
 import Header from './components/header/Header';
 import Perfect from './components/Perfect';
 import { Register } from './components/users/Register';
-import Slider from './components/Slider';
+import Slider from './components/slider/Slider';
 import { Login } from './components/users/Login';
+import Mood from './components/Mood';
 function App() {
 
 
@@ -18,6 +19,7 @@ function App() {
         <ContactUs/>
         <Perfect/>
         <Combined/>
+        <Mood />
         <Footer/>
       </>
   );

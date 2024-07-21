@@ -1,10 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styles from './user.module.css'
 
-
-
 export function Register() {
-
 
     const [formValues, setFormValues] = useState({
         username: '',
@@ -13,36 +10,23 @@ export function Register() {
         rePassword: ''
     });
 
-
-    
-
     const onSubmitRegister = (e) => {
         e.preventDefault()
         console.log('ok')
     }
-
-
-    const onChangeRegisterInfo = (e) => {
-        setUser(oldUser => ({
-            ...oldUser,
-            [e.target.name]: e.target.value
-
-        }))
-
-        console.log(user)
-    }
     
-    const changeHandler = (e) => {
-        console.log(formValues)
- 
+    const changeHandler = (e) => { 
         setFormValues(oldValues => ({
             ...oldValues,
-            [e.target.name]: e.target.type === 'checkbox'
-                ? e.target.checked
-                : e.target.value,
+            [e.target.name]: e.target.value,
         }));
-       
     };
+
+    useEffect(()=> {
+        inputRef.current.focus();
+    },[])
+
+    const inputRef = useRef();
 
     return (
     <div className={styles['register']}>
@@ -65,6 +49,7 @@ export function Register() {
                                     id='username'
                                     value={formValues.username}
                                     onChange={changeHandler}
+                                    ref={inputRef}
                                 />
 
                             </div>

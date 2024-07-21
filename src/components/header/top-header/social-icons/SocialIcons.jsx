@@ -12,8 +12,7 @@ export default function SocialIcons() {
                 <i className={`fa fa-${icon.name}`}  />
             </a>}
         </li>
-    ))
-
+    ));
 
     return (
         <div className="col-md-4">
