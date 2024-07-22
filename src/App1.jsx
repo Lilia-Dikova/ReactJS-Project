@@ -8,9 +8,7 @@ import Slider from './components/slider/Slider';
 import { Login } from './components/users/Login';
 import Mood from './components/Mood';
 import Test from './components/Test';
-import AboutUs from './components/AboutUs';
 function App() {
-
 
 
   return (
@@ -24,7 +22,6 @@ function App() {
         <Combined/>
         <Mood />
         <Footer/>
-        <AboutUs />
       </>
   );
 }

@@ -21,10 +21,11 @@ export default function Mood() {
 
     return (
         <>
-            <div className="contact">
+            <div className="about-us">
+                <div className='container-mood'>
                 <div className="col-md-12 text_align_center">
                     <h1>Purrfectly Random: Your Daily Dose of Pet Happiness!🐾😸</h1>
-                    <div className="image-container">
+                    <div >
                         <img className="custom_img" src={imgUrl} alt="Mood" />
                     </div>
                 </div>
@@ -60,6 +61,7 @@ export default function Mood() {
                         </button>
                     </div>
                 </div>
+            </div>
             </div>
         </>
     );

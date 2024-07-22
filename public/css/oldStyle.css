@@ -34,19 +34,9 @@ basic
 }
 
 .container {
-    max-width: 1270px;
+    max-width: 1170px;
 }
 
-
-
-
-.container-mood {
-    max-width: 3000px;
-}
-
-.container-mood h1 {
-    padding-bottom: 80px;
-}
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -255,7 +245,7 @@ button {
 
 .read_more {
     font-size: 16px;
-    background: #F37A1F;
+    background: #212121;
     max-width: 233px;
     width: 100%;
     transition: ease-in all 0.5s;
@@ -269,7 +259,7 @@ button {
 }
 
 .read_more:hover {
-    background: #00a005;
+    background: #39b54a;
     color: #fff;
 }
 
@@ -323,7 +313,7 @@ button {
 
 .header-area {
     width: 100%;
-    background: #393939;
+    background: #141313;
 }
 
 
@@ -331,50 +321,47 @@ button {
 
 .header_top {
 
-    height: 66px;
-    line-height: 69px;
+    height: 129px;
+    line-height: 129px;
 
 }   
 
 
-.logo h1 {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: normal;
-    text-align: left;
-    position: absolute;
-    padding-left: 40px;
-    padding-top: 16px;
+.logo a {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
 }
-
-
 
 
 ul.top_info {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 ul.top_info li {
     padding-bottom: 15px;
     display: inline-block;
-    font-size: 13px;
-    color: #ffffff;
+    font-size: 16px;
+    color: #dfdcdc;
 }
 
 ul.top_info li i {
     margin-right: 5px;
-    color: #ffffff;
+    color: #dfdcdc;
     text-align: center;
-    font-size: 13px;
+    font-size: 16px;
 }
 ul.top_info li a {
-    color: #ffffff;
+    color: #dfdcdc;
 }
 
 ul.top_info li a:hover {
-    color: #F37A1F;
+    color: #0dd533;
 }
 
 
@@ -387,7 +374,7 @@ ul.social_icon li a i {
     font-size: 17px;
     color: #2d2d2d;
     transition: ease-in all 0.5s;
-    background: #ffffff;
+    background: #fff;
     width: 29px;
     height: 29px;
     line-height: 29px;
@@ -395,24 +382,20 @@ ul.social_icon li a i {
     text-align: center;
 }
 ul.social_icon li a i:hover {
-    color: #ffffff;
+    color: #fff;
     transition: ease-in all 0.5s;
-    background: #F37A1F;
+    background: #39b54a;
 }
 
 
 
 .navbar-area {
-    background: #ffffff;
+    background: #39b54a;
     display: flex;
     justify-content: space-around;
-    height: 62px;
+    height: 112px;
     align-items: center;
-    margin-bottom: -34px;
-    border: 1px solid #F37A1F;
-    border-radius: 25px;
-    position: relative;
-    z-index: 2;
+    margin-bottom: -54px;
 }
 
 
@@ -420,7 +403,6 @@ ul.social_icon li a i:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
 }
 
 .site-navbar ul {
@@ -431,7 +413,7 @@ ul.social_icon li a i:hover {
 }
 
 .site-navbar ul li a {
-    color: #393939;
+    color: #fff;
     font-size: 17px;
     display: block;
     text-decoration: none;
@@ -439,24 +421,18 @@ ul.social_icon li a i:hover {
 }
 
 .site-navbar ul li {
-    position: relative;
     padding-right: 70px;
 }
 
 .site-navbar ul li:last-child {
     padding-right: 0;
-    position: relative;
 }
 
 .site-navbar ul li a:hover {
-    color: #F37A1F;
+    color: #141313;
 }
-
 .site-navbar ul li a.active {
-    color: #F37A1F;
-
-    text-shadow:2px 2px 10px #ee5555, 2px 2px 20px #ccc;
-
+    color: #141313;
 }
 
 /* navbar regular css end */
@@ -517,7 +493,7 @@ ul.social_icon li a i:hover {
     display: flex;
     align-items: center;
     text-align: center;
-    color: #393939;
+    color: #fff;
 }
 
 
@@ -527,14 +503,9 @@ ul.email {
 ul.email li {padding-right: 65px; display: inline-block;}
 ul.email li:last-child {padding-right: 0px;}
 ul.email li a {
-    color: #39b54a; 
+    color: #fff; 
     font-size: 17px;
     text-transform: uppercase;
-}
-
-ul.email li a:hover {
-    color: #F37A1F; 
-
 }
 
 ul.email li a i {
@@ -563,7 +534,7 @@ ul.email li a i {
 
     padding: 80px 0;
     padding-top: 10%;
-    background: url(../images/banner1.jpg);
+    background: url(../images/banner.png);
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
@@ -593,7 +564,6 @@ ul.email li a i {
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
-    background-position-x: center;
 }
 
 .creative p {
@@ -616,7 +586,7 @@ ul.email li a i {
     font-size: 40px;
     opacity: 1;
     top: 98%;
-    box-shadow: 0 0 10px rgba(13, 3, 3, 0.28);
+    box-shadow: 0 0 10px rgba(13, 3, 3, 0.38);
     z-index: 999;
     border-radius: 50px;
 }
@@ -634,7 +604,7 @@ ul.email li a i {
 #banner1 .carousel-control-prev:focus,
 #banner1 .carousel-control-prev:hover {
     color: #fff;
-    background: #a4b6c2;
+    background: #39b54a;
 }
 
 
@@ -670,7 +640,7 @@ ul.email li a i {
 }
 .perfect_img span {
     display: block;
-    background: #003e29;
+    background: #39b54a;
     width: 116px;
     height: 59px;
     text-align: center;
@@ -805,7 +775,6 @@ ul.email li a i {
 .contact {
     background: #fff;
     padding-top: 74px;
-    padding-bottom: 80px;
 }
 
 .main_form .form_control {
@@ -856,7 +825,7 @@ ul.email li a i {
 }
 
 #request *::placeholder {
-    color: grey;
+    color: #1f1d14;
     opacity: 1;
 }
 
@@ -868,8 +837,8 @@ ul.email li a i {
 /** footer **/
 
 .footer {
-    margin-top: auto;
-    padding-top: 80px;
+    margin-top: 90px;
+    padding-top: 90px;
     background: #252525;
     text-align: center;
 }
@@ -1016,105 +985,3 @@ ul.menu_footer li a:hover {
 .portfolio_page .footer {
     margin-top: 60px;
 }
-
-
-
-
-  .animal_btn {
-    font-size: 16px;
-    background: #F37A1F;
-    width: 50%;
-    transition: ease-in all 0.5s;
-    color: #fff;
-    height: 70px;
-    line-height: 70px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-
-
-.animal_btn:hover {
-    transition: ease-in all 0.5s;
-    color: #39b54a;
-    background-color: #fff;
-}
-
-.custom_img{
-    max-width: 400px;
-    max-height: 400px; /* Ensure the image size fits well within the carousel */
-    padding: 15px;
-    background-color: #fff; /* Add padding inside the border */
-    object-fit: cover;
-    box-shadow: 0 0 10px rgba(13, 3, 3, 0.28);
-}
-
-
-
-.about-us {
-    padding-top: 90px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding-bottom: 90px;
-    min-height: 768px;
-}
-
-.about-us::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../images/aa.svg') no-repeat center center;
-    background-size:auto;
-    opacity: 0.5; /* Adjust opacity as needed (0 is fully transparent, 1 is fully opaque) */
-    z-index: -1; /* Ensure the background stays behind the content */
-}
-
-.about-us p {
-    padding-top: 40px;
-}
-
-.about-us h1 {
-    size: 44px;
-}
-
-
-.image-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Space between images */
-    position:absolute; /* Position the container absolutely */
-    bottom: 30px; /* Distance from the bottom */
-    right: 30px; /* Distance from the right */
-}
-.image-item {
-    max-width: 300px; /* Max width for each image item */
-    text-align: center;
-    margin: 0; /* Adjust margins to fit rotated images */
-}
-
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
-
-.about-us-font {
-    padding-bottom: 10px;
-}
-
-.about-us-font h2 {
-    font-size: 45px;
-    color: #141313;
-    line-height: 50px;
-    font-weight: bold;
-    padding-left: 512px
-}
-

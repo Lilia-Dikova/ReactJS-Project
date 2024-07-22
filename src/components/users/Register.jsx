@@ -20,6 +20,7 @@ export function Register() {
             ...oldValues,
             [e.target.name]: e.target.value,
         }));
+        console.log(formValues)
     };
 
     useEffect(()=> {
@@ -29,7 +30,7 @@ export function Register() {
     const inputRef = useRef();
 
     return (
-    <div className={styles['register']}>
+    <div className="about-us">
         <div className={styles['container']}>
             <div className="row">
                 <div className="col-md-12 ">

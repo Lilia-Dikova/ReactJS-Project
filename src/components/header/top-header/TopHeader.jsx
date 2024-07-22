@@ -8,10 +8,7 @@ export default function TopHeader() {
                 <div className="row">
                     <div className="col-md-4 d_none">
                         <ul className="top_info">
-                            <li>
-                                <i className="fa fa-phone" aria-hidden="true" />
-                                Call : +01 1234567890
-                            </li>
+                          
                             <li>
                                 <i className="fa fa-envelope" aria-hidden="true" />
                                 <a href="mailto:admin@petacat.biz">admin@petacat.biz</a>

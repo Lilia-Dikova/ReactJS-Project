@@ -8,7 +8,7 @@ export default function ContactInfo() {
             <ul className="top_info">
                 <li>
                     <i className="fa fa-phone" aria-hidden="true" />
-                    Call : +01 1234567890
+                    
                 </li>
                 <li>
                     <i className="fa fa-envelope" aria-hidden="true" />

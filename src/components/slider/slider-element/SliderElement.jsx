@@ -4,7 +4,7 @@ export default function SliderElement() {
 
 
     const content = banners.map((banner) => (
-        <div className={`carousel-item ${banner.active}`}>
+        <div key={banner.href} className={`carousel-item ${banner.active}`}>
             <div className="container">
                 <div className="carousel-caption relative">
                     <div className="row d_flex">
@@ -12,7 +12,7 @@ export default function SliderElement() {
                             <div className="creative">
                                 <h1>{banner.title}</h1>
                                 <p>{banner.content}</p>
-                                <a className="read_more" href={`http://localhost:5174/${banner.href}`}>
+                                <a key={banner.href} className="read_more" href={`http://localhost:5173/${banner.href}`}>
                                     {banner.actionBtn}
                                 </a>
                             </div>

@@ -7,7 +7,7 @@ export default function Controls() {
     ]
 
     const content = options.map(option => (
-        <a
+        <a key={option.name}
             className={`carousel-control-${option.data}`}
             href="#banner1"
             role="button"

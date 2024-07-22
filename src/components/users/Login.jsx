@@ -2,7 +2,7 @@ import styles from './user.module.css'
 
 export function Login() {
     return (
-        <div className={styles['register']}>
+        <div className="about-us">
             <div className={styles['container']}>
                 <div className="row">
                     <div className="col-md-12 ">
