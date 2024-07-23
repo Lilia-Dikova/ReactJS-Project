@@ -7,9 +7,7 @@ export default function Slider() {
             <div className="slider_main">
                 <div id="banner1" className="carousel slide">
                     <div className="carousel-inner">
-
                         <SliderElement />
-
                     </div>
                 <Controls />
                 </div>

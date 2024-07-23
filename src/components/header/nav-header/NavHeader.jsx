@@ -1,9 +1,11 @@
+import {NavLink} from 'react-router-dom';
+
 export default function NavHeader() {
 
     const navigation = [
-        { name: 'Home', href: '/index.html' },
+        { name: 'Home', href: '/' },
         { name: 'About', href: '/about' },
-        { name: 'Blog', href: '/blog' },
+        { name: 'Blog', href: '/catalog' },
         { name: 'Mood Generator', href: '/mood' },
     ]
 
@@ -17,26 +19,23 @@ export default function NavHeader() {
                             <li
                             key={item.name}
                             >
-                                <a className="active"
-                                href={item.href}
+                                <NavLink 
+                                className={({isActive}) => isActive ? 'active' : {}}
+                                to={item.href}
                                 >
                                     {item.name}
-                                </a>
+                                </NavLink>
                             </li>
                         ))}
                     </ul>
-                    <button className="nav-toggler">
-                        <span />
-                    </button>
+               
                 </nav>
                 <ul className="email text_align_right">
                     <li>
-                        <a href="">Log In</a>
+                        <a href="/login">Log In</a>
                     </li>
                     <li>
-                        <a href="">
-                            <i className="fa fa-search" aria-hidden="true" />
-                        </a>
+                        <a href="/register">Sign Up</a>
                     </li>
                 </ul>
             </div>

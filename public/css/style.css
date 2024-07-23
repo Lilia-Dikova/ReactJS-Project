@@ -44,7 +44,7 @@ basic
     max-width: 3000px;
 }
 
-.container-mood h1 {
+.container-mood h2 {
     padding-bottom: 80px;
 }
 html {
@@ -645,6 +645,8 @@ ul.email li a i {
 
 .perfect {
     background: #fff;
+    margin-bottom: 80px;
+    margin-top: 80px;
    
 }
 
@@ -868,7 +870,6 @@ ul.email li a i {
 /** footer **/
 
 .footer {
-    margin-top: auto;
     padding-top: 80px;
     background: #252525;
     text-align: center;
@@ -1046,9 +1047,9 @@ ul.menu_footer li a:hover {
 }
 
 .custom_img{
-    max-width: 400px;
-    max-height: 400px; /* Ensure the image size fits well within the carousel */
-    padding: 15px;
+    max-width: 370px;
+    max-height: 370px; /* Ensure the image size fits well within the carousel */
+    padding: 10px;
     background-color: #fff; /* Add padding inside the border */
     object-fit: cover;
     box-shadow: 0 0 10px rgba(13, 3, 3, 0.28);
@@ -1061,7 +1062,7 @@ ul.menu_footer li a:hover {
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-bottom: 90px;
+    padding-bottom: 50px;
     min-height: 768px;
 }
 
@@ -1090,15 +1091,15 @@ ul.menu_footer li a:hover {
 .image-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Space between images */
-    position:absolute; /* Position the container absolutely */
-    bottom: 30px; /* Distance from the bottom */
-    right: 30px; /* Distance from the right */
+    gap: 15px; 
+    position:static; 
+    float:right;
+
 }
 .image-item {
-    max-width: 300px; /* Max width for each image item */
+    max-width: 280px;
     text-align: center;
-    margin: 0; /* Adjust margins to fit rotated images */
+    margin: 0; 
 }
 
 .img-fluid {
@@ -1118,3 +1119,38 @@ ul.menu_footer li a:hover {
     padding-left: 512px
 }
 
+.mood-font h1 {
+    font-size: 45px;
+    color: #141313;
+    line-height: 80px;
+    font-weight: bold;
+}
+
+.mood-font h2 {
+    font-size: 23px;
+    color: #141313;
+    line-height: 10px;
+    font-weight: normal;
+    font-variant: unicase;
+}
+
+
+.read_more_blog {
+    font-size: 16px;
+    background: #F37A1F;
+    max-width: 180px;
+    width: 100%;
+    transition: ease-in all 0.5s;
+    color: #fff;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.read_more_blog:hover {
+    background: #00a005;
+    color: #fff;
+}

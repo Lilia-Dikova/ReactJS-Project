@@ -1,10 +1,14 @@
-import { banners } from "./content"
+import { banners } from "./content";
+import { Link } from "react-router-dom";
 
 export default function SliderElement() {
 
 
     const content = banners.map((banner) => (
-        <div key={banner.href} className={`carousel-item ${banner.active}`}>
+        <div
+            key={banner.href}
+            className={`carousel-item ${banner.active}`}
+        >
             <div className="container">
                 <div className="carousel-caption relative">
                     <div className="row d_flex">
@@ -12,9 +16,13 @@ export default function SliderElement() {
                             <div className="creative">
                                 <h1>{banner.title}</h1>
                                 <p>{banner.content}</p>
-                                <a key={banner.href} className="read_more" href={`http://localhost:5173/${banner.href}`}>
+                                <Link
+                                    key={banner.href}
+                                    className="read_more"
+                                    to={`${banner.href}`}
+                                >
                                     {banner.actionBtn}
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -24,9 +32,9 @@ export default function SliderElement() {
 
     ))
 
-    return  (
+    return (
         <>
-        {content}
+            {content}
         </>
     )
 

@@ -23,8 +23,9 @@ export default function Mood() {
         <>
             <div className="about-us">
                 <div className='container-mood'>
-                <div className="col-md-12 text_align_center">
-                    <h1>Purrfectly Random: Your Daily Dose of Pet Happiness!🐾😸</h1>
+                <div className="col-md-12 text_align_center mood-font">
+                    <h1>Mood Generator</h1>
+                    <h2> Purrfectly Random: Your Daily Dose of Pet Happiness!🐾😸</h2>
                     <div >
                         <img className="custom_img" src={imgUrl} alt="Mood" />
                     </div>
