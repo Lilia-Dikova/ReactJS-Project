@@ -1,6 +1,6 @@
 import styles from './user.module.css'
 
-export function Login() {
+export default function Login() {
     return (
         <div className="about-us">
             <div className={styles['container']}>
@@ -33,9 +33,7 @@ export function Login() {
                                     <div className="col-md-12">
                                         <button className={styles['send_btn']}>Register</button>
                                     </div>
-
                                 </div>
-
                             </form>
                         </div>
                     </div>

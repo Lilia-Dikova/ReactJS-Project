@@ -1,4 +1,7 @@
+
 import React from 'react';
+import ContactUs from './ContactUs';
+
 
 export default function AboutUs() {
   return (
@@ -12,7 +15,7 @@ export default function AboutUs() {
         <div className="row">
           <div className="col-8">
             <p>
-              Welcome to Pet a Pet! Our community is dedicated to sharing heartwarming and entertaining stories of our beloved pets. From playful antics to touching moments, explore the joy that pets bring into our lives. Sign up now to share your own pet stories and connect with fellow animal lovers.
+              Welcome to Pet<span className='bold-text'>a</span>Cat! Our community is dedicated to sharing heartwarming and entertaining stories of our beloved pets. From playful antics to touching moments, explore the joy that pets bring into our lives. Sign up now to share your own pet stories and connect with fellow animal lovers.
             </p>
           </div>
         </div>

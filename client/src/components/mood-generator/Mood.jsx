@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Mood() {
-    const [imgUrl, setImgUrl] = useState('../images/6.jpg');
+    const [imgUrl, setImgUrl] = useState('../images/Button.svg');
     const [render, setRender] = useState(null);
 
     useEffect(() => {

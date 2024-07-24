@@ -1081,10 +1081,11 @@ ul.menu_footer li a:hover {
 
 .about-us p {
     padding-top: 40px;
+    size: 20px;
 }
 
 .about-us h1 {
-    size: 44px;
+    size: 25px;
 }
 
 
@@ -1112,7 +1113,7 @@ ul.menu_footer li a:hover {
 }
 
 .about-us-font h2 {
-    font-size: 45px;
+    font-size: 35px;
     color: #141313;
     line-height: 50px;
     font-weight: bold;
@@ -1154,3 +1155,7 @@ ul.menu_footer li a:hover {
     background: #00a005;
     color: #fff;
 }
+
+.bold-text {
+    font-weight: bold;
+  }

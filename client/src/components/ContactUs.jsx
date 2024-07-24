@@ -1,4 +1,4 @@
-export function ContactUs() {
+export default function ContactUs() {
     return (
     <div className="contact">
         <div className="container">

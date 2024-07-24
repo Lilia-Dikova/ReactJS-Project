@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import styles from './user.module.css'
 
-export function Register() {
+export default function Register() {
 
     const [formValues, setFormValues] = useState({
         username: '',

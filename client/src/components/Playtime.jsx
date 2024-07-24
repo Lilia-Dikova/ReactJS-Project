@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
-export function PlayTime() {
-
+export default function PlayTime() {
 
     const [cat, setCat] = useState('ฅ⁠^⁠•⁠ﻌ⁠•⁠^⁠ฅ');
 
