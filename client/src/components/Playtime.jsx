@@ -1,38 +1,43 @@
-import { useState } from 'react';
+import React from 'react';
 
-export default function PlayTime() {
-
-    const [cat, setCat] = useState('ฅ⁠^⁠•⁠ﻌ⁠•⁠^⁠ฅ');
-
-
+export default function Test2() {
     return (
-
-        <>
-            <div className="col-md-12 ">
-                <div className="titlepage text_align_center">
-                    <h2>Choose Avatar</h2>
-                </div>
-            </div>
-            <div className="main_form">
-                <div className="row">
-                    <div className="col-md-12 ">
-                        <h1
-                            className="titlepage text_align_center"
-                        >
-                                 ฅ⁠^⁠•⁠ﻌ⁠•⁠^⁠ฅ
-                        </h1>
-                    </div>
-                    <div className="dropdown">
-                        <button className="dropbtn">Dropdown</button>
-                        <div className="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+        <div className="combined">
+            <div className="clients_bg">
+                <div className="container-fluid">
+                    <div className="row d_flex grig">
+                        <div className="col-lg-8">
+                            {/* start slider section */}
+                            <div className="image-container">
+                                <div className="row d_flex">
+                                    <div className="col-md-6">
+                                        <div className="dicti">
+                                            <figure>
+                                                <img src="images/test2.png" alt="#" />
+                                            </figure>
+                                            <h4>Dictionary</h4>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 order">
+                                    <div className="titlepage text_align_left">
+                                        <h2>Uses a dictionary of over 200 Latin words, combined </h2>
+                                        <p>
+                                            All the Lorem Ipsum generators on the Internet tend to repeat
+                                            predefined chunks as necessary, making this the first true
+                                            generator on the Internet. It uses a dictionary of over 200
+                                            Latin words, combined withAll the Lorem{" "}
+                                        </p>
+                                        <a className="read_more" href="#">
+                                            Read More
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </>
-
-    );
+                );
 }

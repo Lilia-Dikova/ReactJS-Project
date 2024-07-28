@@ -38,14 +38,12 @@ basic
 }
 
 
-
-
 .container-mood {
     max-width: 3000px;
 }
 
 .container-mood h2 {
-    padding-bottom: 80px;
+    padding-bottom: 50px;
 }
 html {
     scroll-behavior: smooth;
@@ -53,12 +51,14 @@ html {
 }
 
 body {
+
     color: #666666;
     font-size: 14px;
-    font-family: 'Poppins', sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 1.80857;
     font-weight: normal;
     overflow-x: hidden;
+
 }
 
 a {
@@ -89,27 +89,27 @@ h6 {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 h2 {
-    font-size: 22px;
-}
-
-h3 {
     font-size: 18px;
 }
 
+h3 {
+    font-size: 14px;
+}
+
 h4 {
-    font-size: 16px
+    font-size: 12px
 }
 
 h5 {
-    font-size: 14px
+    font-size: 11px
 }
 
 h6 {
-    font-size: 13px
+    font-size: 10px
 }
 
 *,
@@ -146,7 +146,7 @@ ol {
 p {
     margin: 0px;
     font-weight: normal;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 28px;
     color: #2d2d2d;
 }
@@ -552,13 +552,21 @@ ul.email li a i {
 /** banner section **/
 
 .full_bg {
-  background: #fff;
-  padding:0 45px 45px 45px;
+  /* //background: ; */
+  padding:0px 45px 45px 45px;
   box-shadow: 3px 0 62px rgba(13, 3, 3, 0.10);
   margin: 0 50px;
   margin-bottom: 52px;
 }
 
+.full_custom {
+    background: #fff;
+    padding:0px 45px 45px 45px;
+    box-shadow: 3px 3px 62px rgba(13, 3, 3, 0.10);
+    margin: 0 50px;
+    margin-bottom: 52px;
+  }
+  
 .slider_main {
 
     padding: 80px 0;
@@ -664,7 +672,7 @@ ul.email li a i {
     position: relative;
 }
 
-.perfect_img {margin-top: 40px;}
+.perfect_img {margin-top: 20px;}
 .perfect_img figure img {
     position: relative;
     z-index: 9999;
@@ -715,92 +723,44 @@ ul.email li a i {
 /** end perfect section **/
 
 
-/** combined **/
+/** detailsPage **/
 
-.combined {
-    margin-top: 80px;
+.details {
     padding-top: 80px;
-    padding-bottom: 120px;
-    background:url(../images/testi.jpg);
+    padding-bottom: 350px;
+    background:url(../images/55.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     background-position: center;
-}
-
-#myCarousel .testimo {
-    position: inherit;
-    bottom: 0;
-    padding: 0;
-    left: 0;
-    right: 0;
-}
-
-.combined .titlepage {padding-bottom:0;}
-.combined .titlepage h2 {color: #fff;}
-.combined .titlepage p {color: #fff; padding-top: 20px; padding-bottom: 30px;}
-
-
-.dicti h4 {
-    color: #fff;
-    font-size: 30px;
-    line-height: 30px;
-    font-weight: bold;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 9999999999999999;
     text-align: center;
-    justify-content: center;
-    display: flex;
-    left: 0;
-    right: 0;
-    align-items: center;
 }
 
-.dicti figure {
-    margin: 0;
-    background: #fff;
-    padding: 15px 0;
+.details p {
+    padding-top: 15px;
+    line-height: 20px;
+    font-size: 16px;
 }
 
-
-#myCarousel .carousel-indicators {
-    display: none;
-}
-
-#myCarousel .carousel-control-prev, 
-#myCarousel .carousel-control-next {
-    width: 100px;
-    height: 85px;
-    background-color: #39b54a;
-    color: #fff;
+.details h1 {
     font-size: 20px;
-    opacity: 1;
-    top: 90%;
-    border-radius: 0px;
-}
-
-#myCarousel .carousel-control-prev {
-    left: 22.7%;
-}
-
-#myCarousel .carousel-control-next {
-    right: 22.7%;
-}
-
-#myCarousel .carousel-control-next:focus,
-#myCarousel .carousel-control-next:hover,
-#myCarousel .carousel-control-prev:focus,
-#myCarousel .carousel-control-prev:hover {
-    color: #39b54a;
-    background: #fff;
+    font-weight: bold;
 }
 
 
-/** end combined **/
 
-
-
+.comment_card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+  }
 
 /** contact  **/
 
@@ -1022,14 +982,14 @@ ul.menu_footer li a:hover {
 
 
   .animal_btn {
-    font-size: 16px;
+    font-size: 14px;
     background: #F37A1F;
-    width: 50%;
+    width: 30%;
     transition: ease-in all 0.5s;
     color: #fff;
-    height: 70px;
-    line-height: 70px;
-    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    text-align:justify;
     text-transform: uppercase;
     font-weight: bold;
     display: flex;
@@ -1047,8 +1007,8 @@ ul.menu_footer li a:hover {
 }
 
 .custom_img{
-    max-width: 370px;
-    max-height: 370px; /* Ensure the image size fits well within the carousel */
+    max-width: 250px;
+    max-height: 250px; /* Ensure the image size fits well within the carousel */
     padding: 10px;
     background-color: #fff; /* Add padding inside the border */
     object-fit: cover;
@@ -1058,12 +1018,12 @@ ul.menu_footer li a:hover {
 
 
 .about-us {
-    padding-top: 90px;
+  padding-top: 30px;
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-bottom: 50px;
-    min-height: 768px;
+    padding-bottom: 0px;
+    min-height: 590px;
 }
 
 .about-us::before {
@@ -1073,23 +1033,26 @@ ul.menu_footer li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/aa.svg') no-repeat center center;
-    background-size:auto;
-    opacity: 0.5; /* Adjust opacity as needed (0 is fully transparent, 1 is fully opaque) */
-    z-index: -1; /* Ensure the background stays behind the content */
+    background: url('../images/paw.svg') no-repeat center center;
+    background-size: contain;
+    z-index: -1; 
 }
 
 .about-us p {
-    padding-top: 40px;
-    size: 20px;
+    padding-top: 15px;
+    line-height: 20px;
+    font-size: 16px;
 }
 
 .about-us h1 {
-    size: 25px;
+    padding-top: 40px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 
 .image-container {
+    padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
     gap: 15px; 
@@ -1098,7 +1061,7 @@ ul.menu_footer li a:hover {
 
 }
 .image-item {
-    max-width: 280px;
+    max-width: 180px;
     text-align: center;
     margin: 0; 
 }
@@ -1108,22 +1071,12 @@ ul.menu_footer li a:hover {
     height: auto;
 }
 
-.about-us-font {
-    padding-bottom: 10px;
-}
 
-.about-us-font h2 {
-    font-size: 35px;
-    color: #141313;
-    line-height: 50px;
-    font-weight: bold;
-    padding-left: 512px
-}
 
 .mood-font h1 {
-    font-size: 45px;
+    font-size: 24px;
     color: #141313;
-    line-height: 80px;
+    line-height: 60px;
     font-weight: bold;
 }
 
@@ -1156,6 +1109,95 @@ ul.menu_footer li a:hover {
     color: #fff;
 }
 
-.bold-text {
+.image_detail {
+    max-width: 280px;
+    text-align: center;
+    margin: 0; 
+}
+
+.bold_text {
     font-weight: bold;
+}
+
+.custom-background {
+    max-width: auto;
+    max-height: 250px; /* Ensure the image size fits well within the carousel */
+    padding: 10px;
+    background-color: #fff; /* Add padding inside the border */
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(13, 3, 3, 0.28);
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+.image-and-details {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Add some space below */
+}
+
+.image-and-details img {
+    max-width: 300px; 
+    max-height: 300px;
+    padding: 10px;
+    background-color: #fff; 
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(13, 3, 3, 0.28);
+}
+
+.details-text {
+    display: flex;
+    align-items:flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container_mood_btn {
+    max-width: 700px;
+    text-align: center;
+}
+
+.page-us {
+    padding-top: 30px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding-bottom: 50px;
+      min-height: 700px;
+  }
+  
+  .page-us::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* background: url('../images/ssss.svg') no-repeat center center; */
+      background-size: auto;
+      z-index: -1; 
+  }
+  
+  .page-us p {
+      padding-top: 15px;
+      line-height: 20px;
+      font-size: 16px;
+  }
+  
+  .page-us h1 {
+      padding-top: 40px;
+      font-size: 24px;
+      font-weight: bold;
+  }
+
+  .full_page {
+    /* background: #fff; */
+    /* padding:0px 45px 45px 45px; */
+    box-shadow: 3px 3px 62px rgba(13, 3, 3, 0.10);
+    margin:0 50px;
+    /* margin-bottom: 52px; */
   }

@@ -4,8 +4,8 @@ export default function NavHeader() {
 
     const navigation = [
         { name: 'Home', href: '/' },
-        { name: 'About', href: '/about' },
         { name: 'Blog', href: '/catalog' },
+        { name: 'About', href: '/about' },
         { name: 'Mood Generator', href: '/mood' },
     ]
 

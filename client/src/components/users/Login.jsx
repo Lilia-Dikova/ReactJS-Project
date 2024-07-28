@@ -2,11 +2,12 @@ import styles from './user.module.css'
 
 export default function Login() {
     return (
-        <div className="about-us">
+        <div className='full_page'>
+            <div className="about-us">
             <div className={styles['container']}>
                 <div className="row">
                     <div className="col-md-12 ">
-                        <div className="titlepage text_align_center">
+                        <div className="text_align_center">
                             <h2>Login</h2>
                         </div>
                     </div>
@@ -31,7 +32,7 @@ export default function Login() {
                                         />
                                     </div>
                                     <div className="col-md-12">
-                                        <button className={styles['send_btn']}>Register</button>
+                                        <button className={styles['send_btn']}>Log in</button>
                                     </div>
                                 </div>
                             </form>
@@ -39,6 +40,7 @@ export default function Login() {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

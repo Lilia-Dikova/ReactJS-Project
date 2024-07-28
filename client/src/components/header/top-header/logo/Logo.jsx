@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './Logo.module.css'
 
 export function Logo() {
@@ -7,6 +7,7 @@ export function Logo() {
     const [number, setNumber] = useState(0);
     const [timeInterval, setTimeInterval] = useState(null);
     const [stop, setStop] = useState(false);
+
 
     const changeLogo = () => {
 
