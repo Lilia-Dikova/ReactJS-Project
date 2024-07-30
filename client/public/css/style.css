@@ -37,7 +37,6 @@ basic
     max-width: 1270px;
 }
 
-
 .container-mood {
     max-width: 3000px;
 }
@@ -45,20 +44,19 @@ basic
 .container-mood h2 {
     padding-bottom: 50px;
 }
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
 body {
-
     color: #666666;
     font-size: 14px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 1.80857;
     font-weight: normal;
     overflow-x: hidden;
-
 }
 
 a {
@@ -269,8 +267,8 @@ button {
 }
 
 .read_more:hover {
-    background: #00a005;
-    color: #fff;
+    background: #2d2d2d;
+    color: pink;
 }
 
 .text_align_left {
@@ -326,16 +324,10 @@ button {
     background: #393939;
 }
 
-
-
-
 .header_top {
-
     height: 66px;
     line-height: 69px;
-
 }   
-
 
 .logo h1 {
     color: #ffffff;
@@ -346,9 +338,6 @@ button {
     padding-left: 40px;
     padding-top: 16px;
 }
-
-
-
 
 ul.top_info {
     display: flex;
@@ -399,8 +388,6 @@ ul.social_icon li a i:hover {
     transition: ease-in all 0.5s;
     background: #F37A1F;
 }
-
-
 
 .navbar-area {
     background: #ffffff;
@@ -569,10 +556,10 @@ ul.email li a i {
   
 .slider_main {
 
-    padding: 80px 0;
+    padding: 80px 0; 
     padding-top: 10%;
-    background: url(../images/banner1.jpg);
-    height: 100vh;
+    background: url(../images/banner.png);
+    height: 110vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -598,16 +585,17 @@ ul.email li a i {
 .creative h1 {
     font-size: 67px;
     line-height: 70px;
-    color: #fff;
+    color: #2d2d2d;
     text-transform: uppercase;
     font-weight: bold;
     background-position-x: center;
 }
 
 .creative p {
-    color: #fff;
+    font-size: 20px;
+    color: #2d2d2d;
     padding:40px 0 45px 0;
-    line-height: 30px;
+    line-height: 20px;
 }
 
 
@@ -727,12 +715,13 @@ ul.email li a i {
 
 .details {
     padding-top: 80px;
-    padding-bottom: 350px;
-    background:url(../images/55.svg);
+    padding-bottom: 90px;
+    background:url(../images/77.svg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
     text-align: center;
+    min-height: 590px;
 }
 
 .details p {
@@ -742,11 +731,15 @@ ul.email li a i {
 }
 
 .details h1 {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
 }
 
-
+.details h3 {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 30px;
+}
 
 .comment_card {
     position: relative;
@@ -756,10 +749,9 @@ ul.email li a i {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
+    background-color: rgb(255, 255, 255, 0.7);
   }
 
 /** contact  **/
@@ -769,29 +761,38 @@ ul.email li a i {
     padding-top: 74px;
     padding-bottom: 80px;
 }
+.main_form {
+    margin-top: 20px;
+}
 
 .main_form .form_control {
-    padding: 0 25px;
-    margin-bottom: 20px;
-    width: 100%;
-    height: 66px;
-    background: #ffffff;
+   
+    text-align: center;
+    position:static;
+    padding: 0 20px;
+    margin-bottom: 15px;
+    width: 40%;
+    height: 56px;
+    background: #fff;
     color: #1f1d14;
-    font-size: 15px;
+    border: 1px solid #F37A1F;
+    border-radius: 20px;
+    font-size: 20px;
     font-weight: normal;
-    border: inherit;
-    box-shadow: 2px 0 62px rgba(13, 3, 3, 0.04);
 }
 
 .main_form .textarea {
     margin-bottom: 40px;
-    width: 100%;
-    background: #ffffff;
-    color: #1f1d14 !important;
-    font-size: 15px;
-    font-weight: normal;
-    padding: 15px 25px 15px 25px;
-    border: inherit;
+    text-align: center;
+    width: 80%;
+    background: #fff;
+    color: #1f1d14;
+    border: 1px solid #F37A1F;
+    font-size: 13px;
+    font-weight: lighter;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
     height: 146px;
     box-shadow: 2px 0 62px rgba(13, 3, 3, 0.04);
 }
@@ -830,16 +831,16 @@ ul.email li a i {
 /** footer **/
 
 .footer {
-    padding-top: 80px;
+    padding-top: 50px;
     background: #252525;
     text-align: center;
 }
 
 .hedingh3 h3 {
     color: #fff;
-    font-size: 22px;
-    padding-bottom: 20px;
-    line-height: 23px;
+    font-size: 18px;
+    padding-bottom: 10px;
+    line-height: 30px;
     font-weight: 500;
     text-align: left;
 }
@@ -855,6 +856,7 @@ ul.top_infomation li {
 
 ul.top_infomation li img {
     margin-right: 5px;
+    max-width: 30px;
 }
 
 ul.top_infomation li a {
@@ -938,15 +940,15 @@ ul.menu_footer li a:hover {
 }
 
 .copyright {
-    margin-top: 70px;
+    margin-top: 10px;
 }
 
 .copyright p {
     color: #fff;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 22px;
     text-align: center;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
     font-weight: normal;
 }
 
@@ -1007,10 +1009,10 @@ ul.menu_footer li a:hover {
 }
 
 .custom_img{
-    max-width: 250px;
-    max-height: 250px; /* Ensure the image size fits well within the carousel */
+    max-width: 300px;
+    max-height: 300px; 
     padding: 10px;
-    background-color: #fff; /* Add padding inside the border */
+    background-color: #fff;
     object-fit: cover;
     box-shadow: 0 0 10px rgba(13, 3, 3, 0.28);
 }
@@ -1018,12 +1020,13 @@ ul.menu_footer li a:hover {
 
 
 .about-us {
-  padding-top: 30px;
+  padding-top: 6%;
     display: flex;
     flex-direction: column;
     position: relative;
     padding-bottom: 0px;
-    min-height: 590px;
+    min-height: 720px;
+
 }
 
 .about-us::before {
@@ -1046,7 +1049,7 @@ ul.menu_footer li a:hover {
 
 .about-us h1 {
     padding-top: 40px;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
 }
 
@@ -1121,9 +1124,9 @@ ul.menu_footer li a:hover {
 
 .custom-background {
     max-width: auto;
-    max-height: 250px; /* Ensure the image size fits well within the carousel */
+    max-height: 250px; 
     padding: 10px;
-    background-color: #fff; /* Add padding inside the border */
+    background-color: #fff;
     object-fit: cover;
     box-shadow: 0 0 10px rgba(13, 3, 3, 0.28);
     text-align: center;
@@ -1132,11 +1135,11 @@ ul.menu_footer li a:hover {
 
 
 .image-and-details {
-    padding-top: 30px;
+    padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px; /* Add some space below */
+    margin-bottom: 5px;
 }
 
 .image-and-details img {
@@ -1162,12 +1165,12 @@ ul.menu_footer li a:hover {
 }
 
 .page-us {
-    padding-top: 30px;
+    padding-top: 70px;
       display: flex;
       flex-direction: column;
       position: relative;
       padding-bottom: 50px;
-      min-height: 700px;
+      height: 720px;
   }
   
   .page-us::before {
@@ -1189,15 +1192,19 @@ ul.menu_footer li a:hover {
   }
   
   .page-us h1 {
-      padding-top: 40px;
-      font-size: 24px;
+     
+      font-size: 42px;
+      line-height: 80px;
       font-weight: bold;
   }
 
   .full_page {
-    /* background: #fff; */
-    /* padding:0px 45px 45px 45px; */
     box-shadow: 3px 3px 62px rgba(13, 3, 3, 0.10);
     margin:0 50px;
-    /* margin-bottom: 52px; */
+  }
+
+  .text-details h2{
+    text-align: center;
+    padding-bottom: 10px;
+    
   }

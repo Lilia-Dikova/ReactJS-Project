@@ -8,8 +8,7 @@ export default function NavHeader() {
         { name: 'About', href: '/about' },
         { name: 'Mood Generator', href: '/mood' },
     ]
-
-    
+  
     return (
         <div className="col-md-12 col-sm-12">
             <div className="navbar-area">

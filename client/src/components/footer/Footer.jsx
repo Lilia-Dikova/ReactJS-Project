@@ -66,7 +66,7 @@ export default function Footer () {
                 <div className="row">
                   <div className="col-md-12">
                     <p>
-                      © 2024 All Rights Reserved. Design by {"We Love Animals"}
+                      © 2024 All Rights Reserved. Design by {"petacat"}
                      
                     </p>
                   </div>

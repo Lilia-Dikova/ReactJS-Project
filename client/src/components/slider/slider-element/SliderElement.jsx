@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 export default function SliderElement() {
 
-
     const content = banners.map((banner) => (
         <div
             key={banner.href}

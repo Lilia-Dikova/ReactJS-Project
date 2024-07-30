@@ -39,12 +39,18 @@ export default function Details() {
                     <img src={blogPost.img} alt="#" />
                 </div>
                 <div className="card-body">
+                    <div className="text-details">
+                    <h2>Pet Name: Mimi</h2>
+                    <h2>Age: 21</h2>
+                    <h2>Nickname: Little Batman</h2>
+                    </div>
                     <p className="card-text">{blogPost.content}</p>
                     <div className="d-flex justify-content-center my-4">
                         <button className="read_more_blog mr-4">Edit</button>
                         <button className="read_more_blog mr-4">Delete</button>
                         <button className="read_more_blog mr-4">Like</button>
                     </div>
+                    <h3>Post by: username</h3>
                 </div>
 
                 <div className="comment_card">
@@ -52,28 +58,29 @@ export default function Details() {
                         <h2>Comments</h2>
                     </div>
                     <div className="card-body">
-                        <form onSubmit={handleCommentSubmit}>
-                            <div className="mb-3">
-                                <label htmlFor="comment" className="form-label">Post a comment</label>
-                                <textarea
-                                    className="form-control"
-                                    id="comment"
-                                    rows="3"
-                                    value={comment}
-                                    onChange={(e) => setComment(e.target.value)}
-                                    required
-                                ></textarea>
-                            </div>
-                            <button type="submit" className="read_more_blog">Submit</button>
-                        </form>
-                        <div className="mt-4">
+                        <div className="mt-4 text_align_left">
                             {comments.map((comment, index) => (
                                 <div key={index} className="card mb-2">
                                     <div className="card-body">
                                         <p className="card-text">{comment}</p>
+                                        <label htmlFor="user">username</label>
                                     </div>
                                 </div>
                             ))}
+                            <form onSubmit={handleCommentSubmit}>
+                                <div className="mb-3">
+                                    <label htmlFor="comment" className="form-label">Post a comment</label>
+                                    <textarea
+                                        className="form-control"
+                                        id="comment"
+                                        rows="3"
+                                        value={comment}
+                                        onChange={(e) => setComment(e.target.value)}
+                                        required
+                                    ></textarea>
+                                </div>
+                                <button type="submit" className="read_more_blog">Submit</button>
+                            </form>
                         </div>
                     </div>
                 </div>

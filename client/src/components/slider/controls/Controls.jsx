@@ -3,7 +3,6 @@ export default function Controls() {
     const options = [
         { name: 'Previous', data: 'prev', direction: 'left' },
         { name: 'Next', data: 'next', direction: 'right' },
-
     ]
 
     const content = options.map(option => (
