@@ -1,3 +1,4 @@
+import PostCatalogItem from "../post-catalog/post-catalog-item/PostCatalogItem";
 import Controls from "./controls/Controls";
 import SliderElement from "./slider-element/SliderElement";
 
@@ -9,7 +10,7 @@ export default function Slider() {
                     <div className="carousel-inner">
                         <SliderElement />
                     </div>
-                <Controls />
+                    <Controls />
                 </div>
             </div>
         </div>

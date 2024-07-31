@@ -1,27 +1,18 @@
 import { useEffect, useRef, useState } from 'react'
 import styles from './user.module.css'
+import { register } from '../../util/util'
+import { useForm } from '../../hooks/useForm';
 
 export default function Register() {
 
-    const [formValues, setFormValues] = useState({
-        username: '',
-        email: '',
-        password: '',
-        rePassword: ''
-    });
+    const fields = register.fields;
+    const formInitialValues = register.form;
 
-    const onSubmitRegister = (e) => {
-        e.preventDefault()
-        console.log('ok')
-    }
+    const submitFormHandler = (values) => {
+        console.log(values);
+    } 
 
-    const changeHandler = (e) => {
-        setFormValues(oldValues => ({
-            ...oldValues,
-            [e.target.name]: e.target.value,
-        }));
-        console.log(formValues)
-    };
+    const {values, changeHandler, submitHandler} = useForm (formInitialValues, submitFormHandler)
 
     useEffect(() => {
         inputRef.current.focus();
@@ -40,16 +31,15 @@ export default function Register() {
                             </div>
                         </div>
                         <div className="col-md-12">
-                            <form onSubmit={onSubmitRegister} className={styles['register_form']}>
+                            <form onSubmit={submitHandler} className={styles['register_form']}>
                                 <div className="row">
                                     <div className="col-md-12 ">
                                         <input
                                             className={styles['form_control']}
                                             placeholder="Username"
                                             type="text"
-                                            name="username"
-                                            id='username'
-                                            value={formValues.username}
+                                            name={fields.username}
+                                            value={values.username}
                                             onChange={changeHandler}
                                             ref={inputRef}
                                         />
@@ -60,8 +50,8 @@ export default function Register() {
                                             className={styles['form_control']}
                                             placeholder="Email"
                                             type="email"
-                                            name="email"
-                                            value={formValues.email}
+                                            name={fields.email}
+                                            value={values.email}
                                             onChange={changeHandler}
                                         />
                                     </div>
@@ -70,7 +60,7 @@ export default function Register() {
                                             className={styles['form_control']}
                                             placeholder="Password"
                                             type="password"
-                                            name="password"
+                                            name={fields.password}
                                             onChange={changeHandler}
                                         />
                                     </div>
@@ -79,7 +69,7 @@ export default function Register() {
                                             className={styles['form_control']}
                                             placeholder="Repeat Password"
                                             type="password"
-                                            name="rePassword"
+                                            name={fields.rePassword}
                                             onChange={changeHandler}
                                         />
                                     </div>

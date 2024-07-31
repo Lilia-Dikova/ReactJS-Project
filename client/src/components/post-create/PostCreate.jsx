@@ -1,28 +1,44 @@
+import { useForm } from "../../hooks/useForm";
 
-export default function Create() {
+import {blog} from "../../util/util";
 
+
+export default function PostCreate() {
+
+    const fields = blog.fields;
+    const formInitialValues = blog.form;
+
+    const submitFormHandler = (values) => {
+       console.log(values)
+    }
+
+    const {values, changeHandler, submitHandler} = useForm(formInitialValues,submitFormHandler)
 
     return (
         <div className="details">
             <div className="container">
                 <div className="col-md-12">
                     <h1>Create your post</h1>
-                    <form id="request" className="main_form">
+                    <form id="request" className="main_form" onSubmit={submitHandler} >
                         <div className="row">
                             <div className="col-md-12 ">
                                 <input
                                     className="form_control"
                                     placeholder="Pet Name"
-                                    type="type"
-                                    name="name"
+                                    type="text"
+                                    name={fields.name}
+                                    value={values.name}
+                                    onChange={changeHandler}
                                 />
                             </div>
                             <div className="col-md-12">
                                 <input
                                     className="form_control"
                                     placeholder="Pet Nickname"
-                                    type="type"
-                                    name="nickName"
+                                    type="text"
+                                    name={fields.nickName}
+                                    value={values.nickName}
+                                    onChange={changeHandler}
                                 />
                             </div>
                             <div className="col-md-12">
@@ -30,7 +46,9 @@ export default function Create() {
                                     className="form_control"
                                     placeholder="Age"
                                     type="number"
-                                    name="age"
+                                    name={fields.age}
+                                    value={values.age}
+                                    onChange={changeHandler}
                                 />
                             </div>
                             <div className="col-md-12">
@@ -38,14 +56,19 @@ export default function Create() {
                                     className="form_control"
                                     placeholder="Story Title"
                                     type="text"
-                                    name="title"
+                                    name={fields.title}
+                                    value={values.title}
+                                    onChange={changeHandler}
                                 />
                             </div>
                             <div className="col-md-12">
                                 <input
                                     className="form_control"
-                                    placeholder="imageUrl"
+                                    placeholder="Share your image link"
                                     type="text"
+                                    name={fields.imageUrl}
+                                    value={values.imageUrl}
+                                    onChange={changeHandler}
                                 />
                             </div>
                             
@@ -53,19 +76,19 @@ export default function Create() {
                                 <textarea
                                     className="textarea"
                                     placeholder="Story"
-                                    type="type"
-                                    name="content"
-                                 
+                                    type="text"
+                                    name={fields.content}
+                                    value={values.content}
+                                    onChange={changeHandler}
                                 />
                             </div>
                             <div className="col-md-12">
-                                <button className="send_btn">Send</button>
+                                <button type="submit" className="send_btn">Send</button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-            
         </div>
     );
 }

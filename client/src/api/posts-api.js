@@ -2,7 +2,7 @@ import requester from "./requester";
 
 const BASE_URL = 'http://localhost:3030/jsonstore/stories'
 
-export const getAll  = async () => {
+const getAll  = async () => {
     const result = await requester.get(BASE_URL);
 
     const posts = Object.values(result);
@@ -10,10 +10,13 @@ export const getAll  = async () => {
     return posts;
 }
 
-const blogAPI = {
+const getOne = (postId) => requester.get(`${BASE_URL}/${postId}`);
+
+const postsAPI = {
     getAll,
+    getOne
 }
 
-export default blogAPI;
+export default postsAPI;
 
 

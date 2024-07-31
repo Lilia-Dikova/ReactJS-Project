@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
-import blogAPI from '../../api/blog-api';
+import blogAPI from '../../api/posts-api';
 
-import CatalogItem from './catalog-item/CatalogItem';
+import BlogCatalogItem from './post-catalog-item/PostCatalogItem';
 
 
-export default function Catalog() {
+export default function PostCatalog() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -23,7 +23,7 @@ export default function Catalog() {
             <div className="details">
                 {posts.length > 0
                     ? <div className="row d-flex text_align_center">
-                         {posts.map(post => <CatalogItem key={post._id} {...post} />)}
+                         {posts.map(post => <BlogCatalogItem key={post._id} {...post} />)}
                     </div>
                     : <h1>There are no posts yet.</h1>
                 }

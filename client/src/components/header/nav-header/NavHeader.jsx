@@ -1,4 +1,4 @@
-import {NavLink} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 
 export default function NavHeader() {
 
@@ -31,10 +31,10 @@ export default function NavHeader() {
                 </nav>
                 <ul className="email text_align_right">
                     <li>
-                        <a href="/login">Log In</a>
+                        <Link to="/login">Log In</Link>
                     </li>
                     <li>
-                        <a href="/register">Sign Up</a>
+                        <Link to="/register">Sign Up</Link>
                     </li>
                 </ul>
             </div>

@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 
-import styles from './Catalog.module.css'
+import styles from './PostCatalogItem.module.css'
 
-export default function CatalogItem({
+export default function PostCatalogItem({
     _id,
     nickName,
     imageUrl,
@@ -22,7 +22,7 @@ export default function CatalogItem({
                 <div className={styles['body']}>
                     <h3 className={styles['title']}>{title}</h3>
                     <p>{content}</p>
-                    <Link className={styles['read_more']} to={`/catalog/${_id}`}>Read More</Link>
+                    <Link className={styles['read_more']} to={`/catalog/details/${_id}`}>Read More</Link>
                 </div>
             </div>
         </div>

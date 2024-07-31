@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import blogAPI from '../../api/posts-api';
+import { useParams } from 'react-router-dom';
 
-export default function Details() {
+export default function PostDetails() {
+
+    
     const [comments, setComments] = useState([]);
     const [comment, setComment] = useState('');
 
@@ -12,39 +16,30 @@ export default function Details() {
         }
     };
 
-    const blogPost = {
-        date: '02 Feb',
-        img: 'images/banner.png',
-        title: 'Some Tips for Planning a Perfect Summer Vacation',
-        content: `All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, 
-                  making this the first true generator on the Internet. It uses a dictionary of over 200 Latin 
-                  words, combined with all the Lorem Ipsum generators on the Internet tend to repeat predefined 
-                  chunks as necessary, making this the first true generator on the Internet. It uses a dictionary 
-                  of over 200 Latin words, combined with all the Lorem Ipsum generators on the Internet tend to 
-                  repeat predefined chunks as necessary, making this the first true generator on the Internet. It 
-                  uses a dictionary of over 200 Latin words, combined with.`
-    };
+  const [post, setPost] = useState({})
+  const { postId } = useParams();
 
-    const details = {
-        age: '25',
-        name: 'John Doe',
-        nickname: 'Johnny'
-    };
+   useEffect(() => {
+    (async()=> {
+        const result = await blogAPI.getOne(postId);
+        setPost(result)
+    })()
+   })
 
     return (
         <div className="details">
             <div className="container">
-                <h1>{blogPost.title}</h1>
+                <h1>{post.title}</h1>
                 <div className="image-and-details">
-                    <img src={blogPost.img} alt="#" />
+                    <img src={post.imageUrl} alt="#" />
                 </div>
                 <div className="card-body">
                     <div className="text-details">
-                    <h2>Pet Name: Mimi</h2>
-                    <h2>Age: 21</h2>
-                    <h2>Nickname: Little Batman</h2>
+                    <h2>Pet Name: {post.name}</h2>
+                    <h2>Age: {post.age}</h2>
+                    <h2>Nickname: {post.nickName}</h2>
                     </div>
-                    <p className="card-text">{blogPost.content}</p>
+                    <p className="card-text">{post.content}</p>
                     <div className="d-flex justify-content-center my-4">
                         <button className="read_more_blog mr-4">Edit</button>
                         <button className="read_more_blog mr-4">Delete</button>
