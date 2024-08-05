@@ -30,3 +30,13 @@ export function useGetOnePosts(postId) {
 
     return [post, setPost];
 }
+
+export function useCreatePosts() {
+    const postCreateHandler = async (postData) => {
+        const result = await postsAPI.create(postData);
+
+        return result;
+    }
+    return postCreateHandler;
+
+}

@@ -1339,6 +1339,29 @@
     	}
     };
     var seedData = {
+
+        posts: {
+        
+                "b95fe276-ab28-4988-80f2-6ae71d56902b": {
+                    "name": "Bella",
+                    "nickName": "Little Belle",
+                    "age": "5",
+                    "title": "Bella's Journey: From Stray to Star",
+                    "content": "Bella came into my life as a stray, wandering the streets near my neighborhood. She looked rough and hungry, but her eyes were full of hope. I brought her home, and though she was skittish at first, she slowly warmed up to me. I started calling her Little Belle because of her gentle nature.Now, at five years old, Bella is the most affectionate and playful pet. She loves chasing butterflies and has a special knack for sensing when someone needs comfort. One of my fondest memories is the day she learned to fetch. Watching her run across the yard, tail wagging, always brings a smile to my face. Bella's transformation from a stray to the star of my life shows the power of love and care. She’s a reminder that those who need us most often have the most to give. Bella has filled my life with joy, and for that, I am forever grateful.",
+                    "imageUrl": "https://cdn.shopify.com/s/files/1/2179/0173/files/Cat_Obituary_Example_480x480.jpg?v=1708538556",
+                    "_id": "b95fe276-ab28-4988-80f2-6ae71d56902b"
+                },
+                "e4b77b8a-1fe4-452d-96bd-43a58e0e3a5f": {
+                    "name": "Whiskers",
+                    "nickName": "Whis",
+                    "age": "3",
+                    "title": "Whiskers: The Cat Who Found Home",
+                    "content": "Whiskers showed up on my doorstep one rainy evening, soaked and shivering. His green eyes were filled with both fear and curiosity. I took him in, dried him off, and gave him some food. He was hesitant at first, but soon he started to trust me. I named him Whiskers, and Whis quickly became his nickname.Now three years old, Whiskers is a beloved member of my family. He loves to perch on the windowsill, watching the world go by, and his purring is the best sound to come home to after a long day. His favorite activity is chasing the laser pointer around the living room, and his playful antics never fail to make me laugh.Whiskers' journey from a scared stray to a cherished pet is a beautiful reminder of the bond that can form between humans and animals. He has brought so much joy into my life, and I can't imagine a day without him.",
+                    "imageUrl": "https://s.yimg.com/ny/api/res/1.2/BGyy4TfSTlMVtqBDrwk2AQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en/daily_paws_articles_948/9a02f3b6a1be53649dbd090dd85ee0f1",
+                    "_id": "e4b77b8a-1fe4-452d-96bd-43a58e0e3a5f"
+                }
+   
+        },
     	recipes: {
     		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",

@@ -77,6 +77,7 @@ export default function Login() {
                                                 name={fields.password}
                                                 value={values.password}
                                                 onChange={changeHandler}
+                                                autoComplete='false'
                                             />
                                         </div>
                                         <div className="col-md-12">

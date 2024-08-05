@@ -1,5 +1,6 @@
+import { useNavigate } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
-
+import { useCreatePosts } from "../../hooks/usePosts";
 import {blogData} from "../../util/util";
 
 
@@ -8,11 +9,23 @@ export default function PostCreate() {
     const fields = blogData.fields;
     const formInitialValues = blogData.form;
 
-    const submitFormHandler = (values) => {
-       console.log(values)
+    const createPost = useCreatePosts();
+    const navigate = useNavigate();
+
+    const createHandler = async (values) => {
+        try {
+            const {_id} = await createPost(values);
+            navigate(`/catalog/details/${_id}`);
+        } catch (err) {
+            console.log(err.message);
+        }
     }
 
-    const {values, changeHandler, submitHandler} = useForm(formInitialValues,submitFormHandler)
+    const {
+        values, 
+        changeHandler, 
+        submitHandler
+    } = useForm(formInitialValues,createHandler)
 
     return (
         <div className="details">
@@ -65,7 +78,7 @@ export default function PostCreate() {
                                 <input
                                     className="form_control"
                                     placeholder="Share your image link"
-                                    type="text"
+                                    type="url"
                                     name={fields.imageUrl}
                                     value={values.imageUrl}
                                     onChange={changeHandler}

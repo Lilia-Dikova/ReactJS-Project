@@ -1,17 +1,21 @@
 async function requester(method, url, data) {
 
-    const options = {};
-
-    if (method !== 'GET') {
-        options.method = method;
-    }
+    const options = {
+        method,
+        headers: {}
+    };
 
     if (data) {
-        options.headers = {
-            'Content-Type': 'application/json',
-        };
+        options.headers['Content-Type'] = 'application/json';
         options.body = JSON.stringify(data);
     }
+
+    const accessToken = localStorage.getItem('accessToken');
+
+    if (accessToken) {
+        options.headers['X-Authorization'] = accessToken;
+    }
+
 
     const response = await fetch(url, options);
     const result = await response.json();

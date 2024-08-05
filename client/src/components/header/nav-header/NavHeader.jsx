@@ -1,52 +1,64 @@
-import {Link, NavLink} from 'react-router-dom';
+import { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthContext';
 
 export default function NavHeader() {
 
-    const navigation = [
+    let navigationPages = [
         { name: 'Home', href: '/' },
         { name: 'Blog', href: '/catalog' },
         { name: 'About', href: '/about' },
         { name: 'Mood Generator', href: '/mood' },
     ]
-  
+
+    let navigationUser = [
+        { name: 'Login', href: '/login' },
+        { name: 'Register', href: '/register' }
+    ]
+
+    const { isAuthenticated } = useContext(AuthContext)
+
+    if (isAuthenticated) {
+        navigationUser = [
+            { name: 'Logout', href: '/logout' },
+        ];
+        navigationPages.push({ name: 'Create', href: '/create' })
+
+    }
     return (
         <div className="col-md-12 col-sm-12">
             <div className="navbar-area">
                 <nav className="site-navbar">
                     <ul>
-                        {navigation.map(item => (
+                        {navigationPages.map(item => (
                             <li
-                            key={item.name}
+                                key={item.name}
                             >
-                                <NavLink 
-                                className={({isActive}) => isActive ? 'active' : {}}
-                                to={item.href}
+                                <NavLink
+                                    className={({ isActive }) => isActive ? 'active' : {}}
+                                    to={item.href}
                                 >
                                     {item.name}
                                 </NavLink>
                             </li>
                         ))}
                     </ul>
-               
                 </nav>
+
                 <ul className="email text_align_right">
-                    <li>
-                        <NavLink 
-                         className={({isActive}) => isActive ? 'active' : {}}
-                        to="/login"
+                    {navigationUser.map(item => (
+                        <li
+                            key={item.name}
                         >
-                            Log In
+
+                            <NavLink
+                                className={({ isActive }) => isActive ? 'active' : {}}
+                                to={item.href}
+                            >
+                                {item.name}
                             </NavLink>
-                    </li>
-                    <li>
-                        <NavLink 
-                        className={({isActive}) => isActive ? 'active' : {}}
-                        to="/register"
-                        
-                        >
-                            Sign Up
-                            </NavLink>
-                    </li>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </div>
