@@ -3,6 +3,9 @@ import React from 'react';
 export default function Test2() {
     return (
         <div className="combined">
+            {/* <div className='errorContainer fade show'>
+                <p>Error</p>
+            </div> */}
             <div className="clients_bg">
                 <div className="container-fluid">
                     <div className="row d_flex grig">

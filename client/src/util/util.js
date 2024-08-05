@@ -1,8 +1,8 @@
- const blog = {};
- const register = {};
- const login = {};
+ const blogData = {};
+ const registerData = {};
+ const loginData = {};
 
-blog.fields = {
+blogData.fields = {
     name: 'name',
     nickName: 'nickName',
     age: 'age',
@@ -11,42 +11,42 @@ blog.fields = {
     content: 'content'
 }
 
- blog.form = {
-    [blog.fields.name]: '',
-    [blog.fields.nickName]: '',
-    [blog.fields.age]: '',
-    [blog.fields.title]: '',
-    [blog.fields.imageUrl]: '',
-    [blog.fields.content]: '',
+ blogData.form = {
+    [blogData.fields.name]: '',
+    [blogData.fields.nickName]: '',
+    [blogData.fields.age]: '',
+    [blogData.fields.title]: '',
+    [blogData.fields.imageUrl]: '',
+    [blogData.fields.content]: '',
 }
 
-register.fields = {
+registerData.fields = {
     username: 'username',
     email: 'email',
     password: 'password',
     rePassword: 'rePassword'
 }
 
-register.form = {
-    [register.fields.username]: '',
-    [register.fields.email]: '',
-    [register.fields.password]: '',
-    [register.fields.rePassword]: ''
+registerData.form = {
+    [registerData.fields.username]: '',
+    [registerData.fields.email]: '',
+    [registerData.fields.password]: '',
+    [registerData.fields.rePassword]: ''
 }
 
 
-login.fields = {
+loginData.fields = {
     email: 'email',
     password: 'password'
 }
 
-login.form = {
-    [login.fields.email]: '',
-    [login.fields.password]: ''
+loginData.form = {
+    [loginData.fields.email]: '',
+    [loginData.fields.password]: ''
 }
 
 export {
-    blog,
-    register,
-    login
+    blogData,
+    registerData,
+    loginData
 }

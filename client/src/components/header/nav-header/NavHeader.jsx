@@ -31,10 +31,21 @@ export default function NavHeader() {
                 </nav>
                 <ul className="email text_align_right">
                     <li>
-                        <Link to="/login">Log In</Link>
+                        <NavLink 
+                         className={({isActive}) => isActive ? 'active' : {}}
+                        to="/login"
+                        >
+                            Log In
+                            </NavLink>
                     </li>
                     <li>
-                        <Link to="/register">Sign Up</Link>
+                        <NavLink 
+                        className={({isActive}) => isActive ? 'active' : {}}
+                        to="/register"
+                        
+                        >
+                            Sign Up
+                            </NavLink>
                     </li>
                 </ul>
             </div>

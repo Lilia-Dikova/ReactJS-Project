@@ -1,12 +1,12 @@
 import { useForm } from "../../hooks/useForm";
 
-import {blog} from "../../util/util";
+import {blogData} from "../../util/util";
 
 
 export default function PostCreate() {
 
-    const fields = blog.fields;
-    const formInitialValues = blog.form;
+    const fields = blogData.fields;
+    const formInitialValues = blogData.form;
 
     const submitFormHandler = (values) => {
        console.log(values)

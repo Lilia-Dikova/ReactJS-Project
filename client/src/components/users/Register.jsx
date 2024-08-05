@@ -1,27 +1,58 @@
 import { useEffect, useRef, useState } from 'react'
+
 import styles from './user.module.css'
-import { register } from '../../util/util'
+
+import { registerData } from '../../util/util'
 import { useForm } from '../../hooks/useForm';
+import { useNavigate } from 'react-router-dom';
+import { useRegister } from '../../hooks/useAuth';
 
 export default function Register() {
 
-    const fields = register.fields;
-    const formInitialValues = register.form;
+    const fields = registerData.fields;
+    const formInitialValues = registerData.form;
+    const [error, setError] = useState('');
 
-    const submitFormHandler = (values) => {
-        console.log(values);
-    } 
-
-    const {values, changeHandler, submitHandler} = useForm (formInitialValues, submitFormHandler)
-
+    const inputRef = useRef();
     useEffect(() => {
         inputRef.current.focus();
     }, [])
 
-    const inputRef = useRef();
+    const navigate = useNavigate();
+    const register = useRegister();
+
+    const registerHandler = async ({ email, password, rePassword, username }) => {
+        setError('')
+
+        if (password !== rePassword) {
+            return setError('Password missmatch!')
+        }
+        if (username.trim() == '') {
+            return setError('Please, enter your username')
+        }
+        try {
+            await register(email, password, username);
+            navigate('/')
+
+        } catch (err) {
+            setError(err.message)
+            console.log(err.message)
+        }
+    }
+
+    const {
+        values,
+        changeHandler,
+        submitHandler
+    } = useForm(formInitialValues, registerHandler)
+
 
     return (
         <div className='full_page'>
+            {error && <div className='errorContainer'>
+                <p>{error}</p>
+            </div>
+            }
             <div className="about-us">
                 <div className={styles['container']}>
                     <div className="row">
@@ -42,6 +73,7 @@ export default function Register() {
                                             value={values.username}
                                             onChange={changeHandler}
                                             ref={inputRef}
+
                                         />
 
                                     </div>

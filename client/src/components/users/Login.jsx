@@ -1,24 +1,51 @@
-import { useForm } from '../../hooks/useForm';
-import { login } from '../../util/util';
+import { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import styles from './user.module.css'
 
+import { useForm } from '../../hooks/useForm';
+import { useLogin } from '../../hooks/useAuth';
+import { loginData } from '../../util/util';
+
 export default function Login() {
 
-    const fields = login.fields;
-    const formInitialValues = login.form;
+    const fields = loginData.fields;
+    const formInitialValues = loginData.form;
+    const [error, setError] = useState(false)
 
+    const inputRef = useRef();
 
+    useEffect(() => {
+        inputRef.current.focus();
+    }, [])
 
-    const submitFormHandler = (values) => {
-        console.log(values)
+    const navigate = useNavigate();
+
+    const login = useLogin();
+
+    const loginHandler = async ({ email, password }) => {
+        setError('')
+        try {
+            await login(email, password)
+            navigate('/')
+        } catch (err) {
+            setError(err.message)
+        }
     }
 
-
-    const {values, changeHandler, submitHandler} = useForm (formInitialValues, submitFormHandler)
+    const {
+        values,
+        changeHandler,
+        submitHandler,
+    } = useForm(formInitialValues, loginHandler)
 
     return (
+
         <div className='full_page'>
+            {error && <div className='errorContainer'>
+                <p>{error}</p>
+            </div>
+            }
             <div className="about-us">
                 <div className={styles['container']}>
                     <div className="row">
@@ -33,6 +60,7 @@ export default function Login() {
                                     <div className="row">
                                         <div className="col-md-12">
                                             <input
+                                                ref={inputRef}
                                                 className={styles['form_control']}
                                                 placeholder="Email"
                                                 type="email"
@@ -47,6 +75,7 @@ export default function Login() {
                                                 placeholder="Password"
                                                 type="password"
                                                 name={fields.password}
+                                                value={values.password}
                                                 onChange={changeHandler}
                                             />
                                         </div>
