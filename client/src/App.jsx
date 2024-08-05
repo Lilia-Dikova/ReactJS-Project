@@ -10,6 +10,8 @@ import Mood from './components/mood-generator/Mood';
 import PostCatalog from './components/post-catalog/PostCatalog';
 import PostDetails from './components/post-details/PostDetails';
 import PostCreate from './components/post-create/PostCreate';
+import Combined from './components/Combined';
+import Test2 from './components/Playtime';
 
 function App() {
 
@@ -30,6 +32,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
         </Routes>
+        <Test2 />
         <Footer/>
       </>
   );

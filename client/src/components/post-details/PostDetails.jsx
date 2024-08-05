@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import blogAPI from '../../api/posts-api';
+
 import { useParams } from 'react-router-dom';
+import { useGetOnePosts } from '../../hooks/usePosts';
+
 
 export default function PostDetails() {
 
@@ -16,15 +18,9 @@ export default function PostDetails() {
         }
     };
 
-  const [post, setPost] = useState({})
-  const { postId } = useParams();
-
-   useEffect(() => {
-    (async()=> {
-        const result = await blogAPI.getOne(postId);
-        setPost(result)
-    })()
-   })
+    const { postId } = useParams();
+    
+    const [post, setPost] = useGetOnePosts(postId)
 
     return (
         <div className="details">

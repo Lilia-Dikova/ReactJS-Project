@@ -1,21 +1,10 @@
-import React, { useEffect, useState } from 'react';
-
-import blogAPI from '../../api/posts-api';
-
 import BlogCatalogItem from './post-catalog-item/PostCatalogItem';
+import {useGetAllPosts} from '../../hooks/usePosts';
 
 
 export default function PostCatalog() {
-    const [posts, setPosts] = useState([]);
 
-    useEffect(() => {
-        (async () => {
-            const result = await blogAPI.getAll();
-
-            setPosts(result);
-        
-        })()
-    }, [])
+    const [posts] = useGetAllPosts();
 
 
     return (

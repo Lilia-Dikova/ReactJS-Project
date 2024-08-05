@@ -36,7 +36,7 @@ export default function Combined () {
                               <div className="col-md-6">
                                 <div className="dicti">
                                   <figure>
-                                    <img src="images/test3.png" alt="#" />
+                                    <img src="images/test1.png" alt="#" />
                                   </figure>
                                   <h4>chunks as necessary,</h4>
                                 </div>
