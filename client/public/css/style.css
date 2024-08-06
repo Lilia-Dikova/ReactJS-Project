@@ -728,21 +728,25 @@ ul.email p {
 
 /** detailsPage **/
 
+
 .details {
     padding-top: 80px;
     padding-bottom: 90px;
-    background:url(../images/77.svg);
+    background:url(../images/777.svg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
     text-align: center;
     min-height: 590px;
+    
 }
 
 .details p {
     padding-top: 15px;
     line-height: 20px;
-    font-size: 16px;
+    font-size: 18px;
+    background-color: rgb(255, 255, 255, 0.7);
+
 }
 
 .details h1 {
@@ -751,7 +755,7 @@ ul.email p {
 }
 
 .details h3 {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     padding-top: 30px;
 }
@@ -1221,6 +1225,7 @@ ul.menu_footer li a:hover {
   .text-details h2{
     text-align: center;
     padding-bottom: 10px;
+    background-color: rgb(255, 255, 255, 0.7);
     
   }
 

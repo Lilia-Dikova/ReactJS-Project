@@ -8,7 +8,6 @@ import { useCreateComments, useGetAllComments } from '../../hooks/useComments';
 
 import { commentData } from '../../util/form-util';
 
-
 export default function PostDetails() {
 
     const fields = commentData.fields;
@@ -52,8 +51,8 @@ export default function PostDetails() {
                     {isAuthor &&
                     <div className="d-flex justify-content-center my-4">
                         {/* <button className="read_more_blog mr-4">Like</button> */}
-                        <button className="read_more_blog mr-4">Edit</button>
-                        <button className="read_more_blog mr-4">Delete</button>
+                        <a className="read_more_blog button mr-4">Edit</a>
+                        <a className="read_more_blog button mr-4">Delete</a>
                     </div>
                     }
 
