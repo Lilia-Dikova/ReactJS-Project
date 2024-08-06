@@ -1,3 +1,5 @@
+import { getAccessToken } from "../util/auth-util";
+
 async function requester(method, url, data) {
 
     const options = {
@@ -10,18 +12,18 @@ async function requester(method, url, data) {
         options.body = JSON.stringify(data);
     }
 
-    const accessToken = localStorage.getItem('accessToken');
+    const accessToken = getAccessToken();
 
     if (accessToken) {
         options.headers['X-Authorization'] = accessToken;
     }
 
-    try {
+    // try {
         const response = await fetch(url, options);
         
             if (!response.ok) {
                 if (response.status == 403) {
-                    localStorage.removeItem('accessToken')
+                    localStorage.removeItem('auth');
                 }
                 const err = await response.json();
                 throw new Error (err.message)
@@ -33,9 +35,9 @@ async function requester(method, url, data) {
                 return response.json();
             }
 
-    } catch (err) {
-        throw err.message
-    }
+    // } catch (err) {
+    //     throw err.message
+    // }
 }
 
 const get = requester.bind(null, 'GET');

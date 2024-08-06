@@ -1,6 +1,7 @@
  const blogData = {};
  const registerData = {};
  const loginData = {};
+ const commentData = {};
 
 blogData.fields = {
     name: 'name',
@@ -45,8 +46,16 @@ loginData.form = {
     [loginData.fields.password]: ''
 }
 
+commentData.fields = {
+    comment: 'comment'
+}
+commentData.form = {
+    [commentData.fields.comment]: '',
+}
+
 export {
     blogData,
     registerData,
-    loginData
+    loginData,
+    commentData,
 }

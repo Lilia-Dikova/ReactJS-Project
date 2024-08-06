@@ -5,7 +5,7 @@ import styles from './user.module.css'
 
 import { useForm } from '../../hooks/useForm';
 import { useLogin } from '../../hooks/useAuth';
-import { loginData } from '../../util/util';
+import { loginData } from '../../util/form-util';
 
 export default function Login() {
 

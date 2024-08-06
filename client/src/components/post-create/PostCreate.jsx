@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
 import { useCreatePosts } from "../../hooks/usePosts";
-import {blogData} from "../../util/util";
+import {blogData} from "../../util/form-util";
 
 
 export default function PostCreate() {

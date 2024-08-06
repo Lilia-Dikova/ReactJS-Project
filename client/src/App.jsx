@@ -2,23 +2,24 @@ import { Routes, Route } from 'react-router-dom';
 
 import Slider from './components/slider/Slider';
 import AboutUs from './components/about-us/AboutUs';
-import Login from './components/users/Login';
+
 import Register from './components/users/Register';
+import Login from './components/users/Login';
+import Logout from './components/users/Logout';
+
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+
 import Mood from './components/mood-generator/Mood';
+
 import PostCatalog from './components/post-catalog/PostCatalog';
 import PostDetails from './components/post-details/PostDetails';
 import PostCreate from './components/post-create/PostCreate';
-import Combined from './components/Combined';
-import Test2 from './components/Playtime';
+
 
 import { AuthContextProvider } from './contexts/AuthContext';
-import Logout from './components/logout/Logout';
 
 function App() {
-
-
 
   return (
     <AuthContextProvider>

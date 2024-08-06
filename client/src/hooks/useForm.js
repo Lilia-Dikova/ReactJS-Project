@@ -13,7 +13,10 @@ export const useForm  = (initialValues, callBack) => {
 
     const submitHandler = (e) => {
         e.preventDefault();
+
         callBack(values);
+
+        setValues(initialValues)
     
     }
 

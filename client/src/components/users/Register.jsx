@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 
 import styles from './user.module.css'
 
-import { registerData } from '../../util/util'
+import { registerData } from '../../util/form-util'
 import { useForm } from '../../hooks/useForm';
 import { useNavigate } from 'react-router-dom';
 import { useRegister } from '../../hooks/useAuth';
