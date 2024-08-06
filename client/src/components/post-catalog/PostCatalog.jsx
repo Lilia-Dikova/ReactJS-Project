@@ -1,5 +1,6 @@
-import BlogCatalogItem from './post-catalog-item/PostCatalogItem';
+
 import {useGetAllPosts} from '../../hooks/usePosts';
+import PostCatalogItem from './post-catalog-item/PostCatalogItem';
 
 
 export default function PostCatalog() {
@@ -12,7 +13,7 @@ export default function PostCatalog() {
             <div className="details">
                 {posts.length > 0
                     ? <div className="row d-flex text_align_center">
-                         {posts.map(post => <BlogCatalogItem key={post._id} {...post} />)}
+                         {posts.map(post => <PostCatalogItem key={post._id} {...post} />)}
                     </div>
                     : <h1>There are no posts yet.</h1>
                 }

@@ -12,29 +12,16 @@ import PostDetails from './components/post-details/PostDetails';
 import PostCreate from './components/post-create/PostCreate';
 import Combined from './components/Combined';
 import Test2 from './components/Playtime';
-import { useState } from 'react';
-import { AuthContext } from './contexts/AuthContext';
+
+import { AuthContextProvider } from './contexts/AuthContext';
+import Logout from './components/logout/Logout';
 
 function App() {
 
-  const [authState, setAuthState] = useState({});
 
-  const changeAuthData = (state) => {
-    localStorage.setItem('accessToken', state.accessToken);
-    setAuthState(state);
-  }
-
-  const contextData = {
-    userId: authState._id,
-    email: authState.email,
-    accessToken: authState.accessToken,
-    isAuthenticated: !!authState.email,
-    changeAuthData,
-  }
 
   return (
-    <AuthContext.Provider value={contextData}>
-
+    <AuthContextProvider>
       <Header />
       <Routes>
         <Route path='/' element={<Slider />} />
@@ -47,11 +34,11 @@ function App() {
 
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
-      </Routes>
- 
-      <Footer />
+        <Route path='/logout' element={<Logout />} />
 
-    </AuthContext.Provider>
+      </Routes>
+      <Footer />
+    </AuthContextProvider>
   );
 }
 

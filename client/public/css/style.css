@@ -537,6 +537,11 @@ a.active {
 
 }
 
+ul.email p {
+    color: pink; 
+    font-size: 17px;
+    display: math;
+}
 /* intro-area css end */
 
 
@@ -666,26 +671,29 @@ a.active {
     margin: 0;
     position: relative;
 }
+.perfect_img {
+    margin: 30px;
+}
 
-.perfect_img {margin-top: 20px;}
-.perfect_img figure img {
-    position: relative;
-    z-index: 9999;
-    box-shadow: 2px 0 62px rgba(13, 3, 3, 0.10);
+.perfect_img {
+   
+    width: 200px;
+    height: auto;
+    border-radius: 35%;
+    background-color: #fff; 
+    padding: 10px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(13, 3, 3, 0.28);
 }
 .perfect_img span {
     display: block;
-    background: #003e29;
-    width: 116px;
-    height: 59px;
+    background: pink;
+    width: 300px;
+    height: 25px;
     text-align: center;
     z-index: 999999;
-    line-height: 59px;
     color: #fff;
-    margin-bottom: -59px;
-    position: relative;
     text-transform: uppercase;
-    cursor: pointer;
     transition: ease-in all 0.5s;
 }
 
@@ -1055,7 +1063,7 @@ ul.menu_footer li a:hover {
 }
 
 .about-us h1 {
-    padding-top: 40px;
+    padding-top: 30px;
     font-size: 32px;
     font-weight: bold;
 }
@@ -1266,3 +1274,28 @@ ul.menu_footer li a:hover {
         opacity: 0;
     }
 }
+
+.about_img{
+    max-width: 300px;
+    max-height: 300px; 
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(13, 3, 3, 0.28);
+}
+
+.about_img span{  
+display: block;
+background: #003e29;
+width: 116px;
+height: 59px;
+text-align: center;
+z-index: 999999;
+line-height: 59px;
+color: #fff;
+margin-bottom: -59px;
+position: relative;
+text-transform: uppercase;
+cursor: pointer;
+transition: ease-in all 0.5s;

@@ -16,15 +16,26 @@ async function requester(method, url, data) {
         options.headers['X-Authorization'] = accessToken;
     }
 
+    try {
+        const response = await fetch(url, options);
+        
+            if (!response.ok) {
+                if (response.status == 403) {
+                    localStorage.removeItem('accessToken')
+                }
+                const err = await response.json();
+                throw new Error (err.message)
+            }
 
-    const response = await fetch(url, options);
-    const result = await response.json();
+            if (response.status == 204) {
+                return response;
+            } else {
+                return response.json();
+            }
 
-    if (!response.ok) {
-        throw result;
+    } catch (err) {
+        throw err.message
     }
-
-    return result
 }
 
 const get = requester.bind(null, 'GET');

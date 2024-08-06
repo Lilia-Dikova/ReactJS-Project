@@ -1,6 +1,9 @@
-import PostCatalogItem from "../post-catalog/post-catalog-item/PostCatalogItem";
+
 import Controls from "./controls/Controls";
 import SliderElement from "./slider-element/SliderElement";
+
+
+
 
 export default function Slider() {
     return (
@@ -11,7 +14,7 @@ export default function Slider() {
                         <SliderElement />
                     </div>
                     <Controls />
-                </div>
+                </div>    
             </div>
         </div>
     );

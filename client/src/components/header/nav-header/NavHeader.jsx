@@ -1,6 +1,5 @@
-import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-import { AuthContext } from '../../../contexts/AuthContext';
+import { useAuthContext } from '../../../contexts/AuthContext';
 
 export default function NavHeader() {
 
@@ -16,11 +15,11 @@ export default function NavHeader() {
         { name: 'Register', href: '/register' }
     ]
 
-    const { isAuthenticated } = useContext(AuthContext)
+    const { isAuthenticated, username } = useAuthContext();
 
     if (isAuthenticated) {
         navigationUser = [
-            { name: 'Logout', href: '/logout' },
+            { name: 'Logout', href: '/logout' }
         ];
         navigationPages.push({ name: 'Create', href: '/create' })
 
@@ -59,6 +58,7 @@ export default function NavHeader() {
                             </NavLink>
                         </li>
                     ))}
+                    {username && <p className='hello-user'>Hello {username}!🐾</p>}
                 </ul>
             </div>
         </div>
