@@ -3,17 +3,20 @@ import { useForm } from "../../hooks/useForm";
 import { useCreatePosts, useGetOnePosts } from "../../hooks/usePosts";
 import {blogData} from "../../util/form-util";
 import postsAPI from "../../api/posts-api";
+import { useMemo } from "react";
 
 
 export default function PostEdit() {
 
     const navigate = useNavigate();
     const fields = blogData.fields;
-    const formInitialValues = blogData.form;
+    const initialValues = blogData.form
+  
 
     const {postId} = useParams();
-
     const [post] = useGetOnePosts(postId);
+
+    const formInitialValues = useMemo(()=> Object.assign({},initialValues, post), [post]);
 
     const updateHandler = async (values) => {
        await postsAPI.update(postId, values);
@@ -26,7 +29,7 @@ export default function PostEdit() {
         values, 
         changeHandler, 
         submitHandler
-    } = useForm(Object.assign(formInitialValues, post),updateHandler)
+    } = useForm(formInitialValues,updateHandler)
 
     return (
         <div className="details">

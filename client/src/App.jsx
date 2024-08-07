@@ -18,6 +18,8 @@ import PostCreate from './components/post-create/PostCreate';
 import PostEdit from './components/post-edit/PostEdit';
 
 import { AuthContextProvider } from './contexts/AuthContext';
+import SiteGuardGuest from './components/common/SiteGuardGuest';
+import SiteGuardUser from './components/common/SiteGuardUser';
 
 
 function App() {
@@ -31,18 +33,23 @@ function App() {
         <Route path='/mood' element={<Mood />} />
 
         <Route path='/catalog' element={<PostCatalog />} />
-        <Route path='/catalog/details/:postId' element={< PostDetails />} />
-        <Route path='/catalog/edit/:postId' element={< PostEdit />} />
-        <Route path='/create' element={<PostCreate />} />
 
-        <Route path='/login' element={<Login />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/logout' element={<Logout />} />
+        <Route path='/catalog/details/:postId' element={< PostDetails />} />
+
+        <Route element={<SiteGuardGuest />}>
+          <Route path='/catalog/edit/:postId' element={< PostEdit />} />
+          <Route path='/create' element={<PostCreate />} />
+          <Route path='/logout' element={<Logout />} />
+        </Route>
+
+        <Route element={<SiteGuardUser />} >
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+        </Route>
 
       </Routes>
-      {/* <PopUp/> */}
       <Footer />
-    </AuthContextProvider>
+    </AuthContextProvider >
   );
 }
 
