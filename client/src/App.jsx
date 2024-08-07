@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { AuthContextProvider } from './contexts/AuthContext';
 
 import Slider from './components/slider/Slider';
 import AboutUs from './components/about-us/AboutUs';
@@ -17,7 +18,6 @@ import PostDetails from './components/post-details/PostDetails';
 import PostCreate from './components/post-create/PostCreate';
 import PostEdit from './components/post-edit/PostEdit';
 
-import { AuthContextProvider } from './contexts/AuthContext';
 import SiteGuardGuest from './components/common/SiteGuardGuest';
 import SiteGuardUser from './components/common/SiteGuardUser';
 

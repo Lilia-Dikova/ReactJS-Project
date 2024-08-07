@@ -74,7 +74,7 @@ export default function Footer() {
               ? (<div className="logo col-md-4">
 
                 <div className=" titlepage text_align_left">
-                  <h1>Thank you for Subscribing!💕</h1>
+                  <h1>Thank you for Subscribing! 💕</h1>
                 </div>
               </div>)
 

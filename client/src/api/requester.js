@@ -18,7 +18,6 @@ async function requester(method, url, data) {
         options.headers['X-Authorization'] = accessToken;
     }
 
-    // try {
         const response = await fetch(url, options);
         
             if (!response.ok) {
@@ -35,9 +34,7 @@ async function requester(method, url, data) {
                 return response.json();
             }
 
-    // } catch (err) {
-    //     throw err.message
-    // }
+  
 }
 
 const get = requester.bind(null, 'GET');

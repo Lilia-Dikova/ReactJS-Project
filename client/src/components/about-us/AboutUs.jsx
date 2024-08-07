@@ -1,5 +1,4 @@
 import React from 'react';
-import ContactUs from '../ContactUs'; // Ensure this is used if needed
 
 export default function AboutUs() {
   return (
@@ -21,6 +20,12 @@ export default function AboutUs() {
           </div>
           <div className="col-4 col-6 offset-md-4">
             <h1>My Pets</h1>
+          </div >
+          <div className="wrapper_about">
+      
+          <img className="custom_img" src="/images/mimi.png" alt="" />
+          <img className="custom_img" src="/images/ushe.png" alt="" />
+
           </div>
         </div>
       </div>

@@ -7,7 +7,6 @@ export default function PostDetailsButtons({
 }) {
 
     const navigate = useNavigate();
-
     const [showModal, setShowModal] = useState(false)
 
     const deleteHandler = async () => {
@@ -18,17 +17,15 @@ export default function PostDetailsButtons({
         } catch (err) {
             console.log(err.message)
         }
-    }
+    };
 
     const abordDelete =()=> {
         setShowModal(false)
-    }
+    };
 
     const onDeleteAction = () => {
         setShowModal(true);
-
-
-    }
+    };
 
     return (
 
@@ -37,7 +34,6 @@ export default function PostDetailsButtons({
             <a onClick={onDeleteAction} className="read_more_blog  mr-4">Delete</a>
             {showModal && <div className="modal-backdrop">
                 <div className="modal-content">
-
                     <div className="errorContainer">
                         <p>Are you sure you want to proceed?</p>
                         <button onClick={abordDelete} className="btn-no">No</button>

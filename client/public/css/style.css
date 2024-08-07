@@ -1317,3 +1317,22 @@ ul.menu_footer li a:hover {
     z-index: 1040;
     background-color: rgb(255, 255, 255, 0.7);
   }
+
+
+  .wrapper_about {
+    font-size:0;
+    text-align:center;
+    width:50%;
+    margin:40px 30% 40px;
+    
+    padding:10px;
+}
+
+.wrapper_about img {
+    display:inline-block;
+    vertical-align:top;
+}
+
+.wrapper_about img:first-child {
+    margin-right:25px;
+}
