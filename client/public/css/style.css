@@ -1345,17 +1345,18 @@ ul.menu_footer li a:hover {
 }
 
 .not_found h2 {
-    font-size: 250px;
+    font-size: 260px;
     line-height: 0px;
     color: #2d2d2d;
     text-transform: uppercase;
     font-weight: bold;
     border: white;
     -webkit-text-stroke: 3px pink;
+    padding-bottom: 130px;
 }
 .not_found h1 {
-    font-size: 65px;
-    line-height: 300px;
+    font-size: 45px;
+    /* line-height: 260px; */
     color: #2d2d2d;
     text-transform: uppercase;
     font-weight: bold;
