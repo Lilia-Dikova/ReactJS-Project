@@ -22,10 +22,8 @@ export default function AboutUs() {
             <h1>My Pets</h1>
           </div >
           <div className="wrapper_about">
-      
-          <img className="custom_img" src="/images/mimi.png" alt="" />
-          <img className="custom_img" src="/images/ushe.png" alt="" />
-
+            <img className="custom_img" src="/images/mimi.png" alt="" />
+            <img className="custom_img" src="/images/ushe.png" alt="" />
           </div>
         </div>
       </div>

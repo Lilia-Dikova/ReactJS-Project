@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react"
 
-export const useForm  = (initialValues, callBack) => {
+export const useForm = (initialValues, callBack) => {
     const [values, setValues] = useState(initialValues);
 
-    useEffect(()=> {
+    useEffect(() => {
         setValues(initialValues)
-    },[initialValues])
-    
-    const changeHandler = (e)  => {
-     
+    }, [initialValues])
+
+    const changeHandler = (e) => {
+
         setValues(oldValues => ({
             ...oldValues,
             [e.target.name]: e.target.value
@@ -21,10 +21,10 @@ export const useForm  = (initialValues, callBack) => {
         await callBack(values);
 
         setValues(initialValues)
-    
+
     }
 
-    return  {
+    return {
 
         values,
         changeHandler,

@@ -20,6 +20,7 @@ import PostEdit from './components/post-edit/PostEdit';
 
 import SiteGuardGuest from './components/common/SiteGuardGuest';
 import SiteGuardUser from './components/common/SiteGuardUser';
+import NotFound from './components/not-found/NotFound';
 
 
 function App() {
@@ -46,7 +47,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
         </Route>
-
+        <Route path='/*' element={<NotFound />} />
       </Routes>
       <Footer />
     </AuthContextProvider >

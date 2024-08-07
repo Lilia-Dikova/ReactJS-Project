@@ -1336,3 +1336,29 @@ ul.menu_footer li a:hover {
 .wrapper_about img:first-child {
     margin-right:25px;
 }
+
+
+
+.not_found {
+    text-align:justify;
+    margin: 150px;
+}
+
+.not_found h2 {
+    font-size: 250px;
+    line-height: 0px;
+    color: #2d2d2d;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: white;
+    -webkit-text-stroke: 3px pink;
+}
+.not_found h1 {
+    font-size: 65px;
+    line-height: 300px;
+    color: #2d2d2d;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-position-x: center;
+    -webkit-text-stroke: 1px pink;
+}

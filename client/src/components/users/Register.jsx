@@ -21,17 +21,17 @@ export default function Register() {
     const navigate = useNavigate();
     const register = useRegister();
 
-    const registerHandler = async ({ email, password, rePassword, username }) => {
+    const registerHandler = async (values) => {
         setError('')
 
-        if (password !== rePassword) {
+        if (values.password !== values.rePassword) {
             return setError('Password missmatch!')
         }
-        if (username.trim() == '') {
+        if (values.username.trim() == '') {
             return setError('Please, enter your username')
         }
         try {
-            await register(email, password, username);
+            await register(values.email, values.password, values.username);
             navigate('/')
 
         } catch (err) {
@@ -93,6 +93,7 @@ export default function Register() {
                                             placeholder="Password"
                                             type="password"
                                             name={fields.password}
+                                            value={values.password}
                                             onChange={changeHandler}
                                         />
                                     </div>
@@ -102,6 +103,7 @@ export default function Register() {
                                             placeholder="Repeat Password"
                                             type="password"
                                             name={fields.rePassword}
+                                            value={values.rePassword}
                                             onChange={changeHandler}
                                         />
                                     </div>
