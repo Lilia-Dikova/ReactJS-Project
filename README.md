@@ -30,6 +30,11 @@ This project is a blog application built using ReactJS. It features a home page,
 - **Path:** `/edit/:postId`
 - **Description:** Displays a form with preseeded data about the post, so owner can directly edit the data.
 
+### My Posts
+
+- **Path:** `/my-posts`
+- **Description:** Displays a catalog with all posts the current user has made.
+
 ### Delete
 
 ### About
