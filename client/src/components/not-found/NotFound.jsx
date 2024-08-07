@@ -7,13 +7,16 @@ export default function NotFound() {
                 <div className="not_found text-align-center">
                     <h2>404</h2>
                     <h1>OOPS! Not Found</h1>
+                    <div>
                     <Link
                    
-                        className="read_more"
-                        to='/'
-                    >
-                        Home
-                    </Link>
+                   className="read_more"
+                   to='/'
+               >
+                   Home
+               </Link>
+                    </div>
+                
                 </div>
             </div>
         </div>
