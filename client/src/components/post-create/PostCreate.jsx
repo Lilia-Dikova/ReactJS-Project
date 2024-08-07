@@ -3,7 +3,6 @@ import { useForm } from "../../hooks/useForm";
 import { useCreatePosts } from "../../hooks/usePosts";
 import {blogData} from "../../util/form-util";
 
-
 export default function PostCreate() {
 
     const fields = blogData.fields;
