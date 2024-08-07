@@ -2,6 +2,10 @@ import { useEffect, useState } from "react"
 
 export const useForm  = (initialValues, callBack) => {
     const [values, setValues] = useState(initialValues);
+
+    useEffect(()=> {
+        setValues(initialValues)
+    },[initialValues])
     
     const changeHandler = (e)  => {
      
@@ -11,10 +15,10 @@ export const useForm  = (initialValues, callBack) => {
         }))
     }
 
-    const submitHandler = (e) => {
+    const submitHandler = async (e) => {
         e.preventDefault();
 
-        callBack(values);
+        await callBack(values);
 
         setValues(initialValues)
     

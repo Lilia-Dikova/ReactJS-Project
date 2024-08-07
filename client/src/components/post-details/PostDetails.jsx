@@ -1,5 +1,4 @@
 import { useParams } from 'react-router-dom';
-
 import { useAuthContext } from '../../contexts/AuthContext';
 
 import { useGetOnePosts } from '../../hooks/usePosts';
@@ -7,11 +6,13 @@ import { useForm } from '../../hooks/useForm';
 import { useCreateComments, useGetAllComments } from '../../hooks/useComments';
 
 import { commentData } from '../../util/form-util';
+import PostDetailsButtons from './post-details-buttons/PostDetailsButtons';
 
 export default function PostDetails() {
 
     const fields = commentData.fields;
     const formInitialValues = commentData.form;
+
 
     const { postId } = useParams();
     const [comments, dispatch] = useGetAllComments(postId);
@@ -49,13 +50,8 @@ export default function PostDetails() {
                     </div>
                     <p className="card-text">{post.content}</p>
                     {isAuthor &&
-                    <div className="d-flex justify-content-center my-4">
-                        {/* <button className="read_more_blog mr-4">Like</button> */}
-                        <a className="read_more_blog button mr-4">Edit</a>
-                        <a className="read_more_blog button mr-4">Delete</a>
-                    </div>
+                        <PostDetailsButtons postId={postId}/>
                     }
-
                 </div>
                 <div className="comment_card">
                     <div className="card-header">

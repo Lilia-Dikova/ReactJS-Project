@@ -40,3 +40,7 @@ export function useCreatePosts() {
     return postCreateHandler;
 
 }
+
+export function useDeletePosts () {
+    
+}

@@ -1253,17 +1253,43 @@ ul.menu_footer li a:hover {
     border-radius: 10px;
     color: white;
 }
+.errorContainer .btn-yes {
+    font-size: 18px;
+    transition: ease-in all 0.5s;
+    background-color: white;
+    text-transform: uppercase;
+    color: #363636;
+    max-width: 160px;
+    width: 100%;
+    display: inline;
+    font-weight: bold;
+    height: 50px;
+    /* line-height: 58px; */
+    margin:  auto;
+}
 
-.errorContainer {
-    -moz-animation: cssAnimation 0s ease-in 12s forwards;
-    /* Firefox */
-    -webkit-animation: cssAnimation 0s ease-in 12s forwards;
-    /* Safari and Chrome */
-    -o-animation: cssAnimation 0s ease-in 12s forwards;
-    /* Opera */
-    animation: cssAnimation 0s ease-in 12s forwards;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+.errorContainer .btn-yes:hover {
+    color: red;
+    background-color: white;
+}
+.errorContainer .btn-no {
+    font-size: 18px;
+    transition: ease-in all 0.5s;
+    background-color: white;
+    text-transform: uppercase;
+    color: #363636;
+    max-width: 160px;
+    width: 100%;
+    display: inline;
+    font-weight: bold;
+    height: 50px;
+    /* line-height: 78px; */
+    margin: 0 auto;
+}
+
+.errorContainer .btn-no:hover {
+    color: green;
+    background-color: white;
 }
 
 @keyframes cssAnimation {
@@ -1280,27 +1306,14 @@ ul.menu_footer li a:hover {
     }
 }
 
-.about_img{
-    max-width: 300px;
-    max-height: 300px; 
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #fff;
-    object-fit: cover;
-    box-shadow: 0 0 10px rgba(13, 3, 3, 0.28);
-}
 
-.about_img span{  
-display: block;
-background: #003e29;
-width: 116px;
-height: 59px;
-text-align: center;
-z-index: 999999;
-line-height: 59px;
-color: #fff;
-margin-bottom: -59px;
-position: relative;
-text-transform: uppercase;
-cursor: pointer;
-transition: ease-in all 0.5s;
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: rgb(255, 255, 255, 0.7);
+  }

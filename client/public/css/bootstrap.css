@@ -5326,11 +5326,11 @@ button.close {
   transform: translate(0, -25%);
 }
 
-@media screen and (prefers-reduced-motion: reduce) {
+/* @media screen and (prefers-reduced-motion: reduce) {
   .modal.fade .modal-dialog {
     transition: none;
   }
-}
+} */
 
 .modal.show .modal-dialog {
   -webkit-transform: translate(0, 0);
@@ -5353,7 +5353,7 @@ button.close {
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
-  background-color: #fff;
+  
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
@@ -5361,13 +5361,13 @@ button.close {
 }
 
 .modal-backdrop {
-  position: fixed;
+  /* position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000;
+  background-color: rgb(255, 255, 255, 0.7); */
 }
 
 .modal-backdrop.fade {
@@ -5377,6 +5377,8 @@ button.close {
 .modal-backdrop.show {
   opacity: 0.5;
 }
+
+
 
 .modal-header {
   display: -ms-flexbox;

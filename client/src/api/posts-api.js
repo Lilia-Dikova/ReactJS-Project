@@ -11,12 +11,20 @@ const getAll = async () => {
 }
 
 const getOne = (postId) => requester.get(`${BASE_URL}/${postId}`);
+
 const create = (postData) => requester.post(`${BASE_URL}`, postData);
+
+const remove = (postId) => requester.del(`${BASE_URL}/${postId}`);
+
+const update = (postId, postData) => requester.put(`${BASE_URL}/${postId}`, postData)
+
 
 const postsAPI = {
     getAll,
     getOne,
     create,
+    remove,
+    update,
 }
 
 export default postsAPI;

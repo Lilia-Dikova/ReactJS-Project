@@ -15,9 +15,10 @@ import Mood from './components/mood-generator/Mood';
 import PostCatalog from './components/post-catalog/PostCatalog';
 import PostDetails from './components/post-details/PostDetails';
 import PostCreate from './components/post-create/PostCreate';
-
+import PostEdit from './components/post-edit/PostEdit';
 
 import { AuthContextProvider } from './contexts/AuthContext';
+
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
 
         <Route path='/catalog' element={<PostCatalog />} />
         <Route path='/catalog/details/:postId' element={< PostDetails />} />
+        <Route path='/catalog/edit/:postId' element={< PostEdit />} />
         <Route path='/create' element={<PostCreate />} />
 
         <Route path='/login' element={<Login />} />
@@ -38,6 +40,7 @@ function App() {
         <Route path='/logout' element={<Logout />} />
 
       </Routes>
+      {/* <PopUp/> */}
       <Footer />
     </AuthContextProvider>
   );
