@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export const useForm = (initialValues, callBack) => {
+export const useForm = (initialValues, callBack, noReset) => {
     const [values, setValues] = useState(initialValues);
 
     useEffect(() => {
@@ -20,7 +20,9 @@ export const useForm = (initialValues, callBack) => {
 
         await callBack(values);
 
-        setValues(initialValues)
+        if (!noReset) {
+            setValues(initialValues)
+        }
 
     }
 

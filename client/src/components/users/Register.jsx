@@ -21,15 +21,22 @@ export default function Register() {
     const navigate = useNavigate();
     const register = useRegister();
 
-    const registerHandler = async (values) => {
+    const registerHandler = async ( values ) => {
         setError('')
 
         if (values.password !== values.rePassword) {
             return setError('Password missmatch!')
         }
-        if (values.username.trim() == '') {
-            return setError('Please, enter your username')
+        if (values.username.trim() == '' || values.username.trim() == '' 
+        ||  values.password.trim() == '' || values.rePassword.trim() ==''
+        ) {
+            return setError('Please, enter all fields')
         }
+
+        if (values.username.length > 15) {
+            return setError('Please, make sure your username has 15 or less characters')
+        }
+
         try {
             await register(values.email, values.password, values.username);
             navigate('/')

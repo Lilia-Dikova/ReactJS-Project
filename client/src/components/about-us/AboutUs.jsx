@@ -18,8 +18,8 @@ export default function AboutUs() {
             <p>PetaCat is dedicated to bringing pet owners together through heartwarming and entertaining stories of their pets. Whether it's a funny anecdote, a touching moment, or an everyday tale that highlights the joy pets bring into our lives, our goal is to create a space where these stories can be shared and cherished by all.</p>
             <p>Join us in creating a vibrant, supportive community that celebrates the love and joy pets bring into our lives. Share your stories, connect with fellow pet owners, and let’s spread the happiness that our furry friends bring!</p>
           </div>
-          <div className="col-4 col-6 offset-md-4">
-            <h1>My Pets</h1>
+          <div className="col-6 col-6 offset-md-4" >
+            <h1>My Pets: aka "Junior Dev Cats"</h1>
           </div >
           <div className="wrapper_about">
             <img className="custom_img" src="/images/mimi.png" alt="" />

@@ -1,33 +1,54 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import { useForm } from "../../hooks/useForm";
 import { useCreatePosts } from "../../hooks/usePosts";
-import {blogData} from "../../util/form-util";
+
+import { blogData } from "../../util/form-util";
 
 export default function PostCreate() {
 
     const fields = blogData.fields;
     const formInitialValues = blogData.form;
 
+    const [error, setError] = useState(false)
+
     const createPost = useCreatePosts();
     const navigate = useNavigate();
 
     const createHandler = async (values) => {
+
+        if (values.name.trim() == '' || values.nickName.trim() == '' || values.age.trim() == '' ||
+            values.title.trim() == '' || values.imageUrl.trim() == '' || values.content.trim() == '') {
+
+            return setError('Please, fill out all fields!')
+        }
+
+        if (values.age < 0) {
+            return setError('Please, use positive number for age!')
+        }
+
         try {
-            const {_id} = await createPost(values);
+            const { _id } = await createPost(values);
             navigate(`/catalog/details/${_id}`);
         } catch (err) {
-            console.log(err.message);
+            return setError(err.message);
         }
     }
-
+    const noReset = true;
+    
     const {
-        values, 
-        changeHandler, 
+        values,
+        changeHandler,
         submitHandler
-    } = useForm(formInitialValues,createHandler)
+    } = useForm(formInitialValues, createHandler, noReset )
 
     return (
         <div className="details">
+            {error && <div className='errorContainer'>
+                <p>{error}</p>
+            </div>
+            }
             <div className="container">
                 <div className="col-md-12">
                     <h1>Create your post</h1>
@@ -83,7 +104,7 @@ export default function PostCreate() {
                                     onChange={changeHandler}
                                 />
                             </div>
-                            
+
                             <div className="col-md-12">
                                 <textarea
                                     className="textarea"

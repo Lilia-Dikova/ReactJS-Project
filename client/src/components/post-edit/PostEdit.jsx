@@ -1,9 +1,11 @@
+import { useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+
 import { useForm } from "../../hooks/useForm";
-import { useCreatePosts, useGetOnePosts } from "../../hooks/usePosts";
-import {blogData} from "../../util/form-util";
+import { useGetOnePosts } from "../../hooks/usePosts";
+
+import { blogData } from "../../util/form-util";
 import postsAPI from "../../api/posts-api";
-import { useMemo } from "react";
 
 
 export default function PostEdit() {
@@ -11,28 +13,45 @@ export default function PostEdit() {
     const navigate = useNavigate();
     const fields = blogData.fields;
     const initialValues = blogData.form
-  
+    const [error, setError] = useState(false)
 
-    const {postId} = useParams();
+
+    const { postId } = useParams();
     const [post] = useGetOnePosts(postId);
 
-    const formInitialValues = useMemo(()=> Object.assign({},initialValues, post), [post]);
+    const formInitialValues = useMemo(() => Object.assign({}, initialValues, post), [post]);
 
     const updateHandler = async (values) => {
-       await postsAPI.update(postId, values);
+        if (values.name.trim() == '' || values.nickName.trim() == '' || values.age.trim() == '' ||
+            values.title.trim() == '' || values.imageUrl.trim() == '' || values.content.trim() == '') {
 
-       navigate(`/catalog/details/${postId}`)
+            return setError('Please, fill out all fields!')
+        }
 
+        if (values.age < 0) {
+            return setError('Please, use positive number for age!')
+        }
+
+        try {
+            await postsAPI.update(postId, values);
+            navigate(`/catalog/details/${postId}`)
+        } catch (err) {
+            return setError(err.message)
+        }
     }
 
     const {
-        values, 
-        changeHandler, 
+        values,
+        changeHandler,
         submitHandler
-    } = useForm(formInitialValues,updateHandler)
+    } = useForm(formInitialValues, updateHandler)
 
     return (
         <div className="details">
+            {error && <div className='errorContainer'>
+                <p>{error}</p>
+            </div>
+            }
             <div className="container">
                 <div className="col-md-12">
                     <h1>Edit your post</h1>
@@ -88,7 +107,7 @@ export default function PostEdit() {
                                     onChange={changeHandler}
                                 />
                             </div>
-                            
+
                             <div className="col-md-12">
                                 <textarea
                                     className="textarea"

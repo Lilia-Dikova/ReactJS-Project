@@ -25,6 +25,10 @@ export default function Login() {
 
     const loginHandler = async ({ email, password }) => {
         setError('')
+
+        if (email.trim() == '' || password.trim() == '') {
+            return setError('Please enter your credentials')
+        }
         try {
             await login(email, password)
             navigate('/')
