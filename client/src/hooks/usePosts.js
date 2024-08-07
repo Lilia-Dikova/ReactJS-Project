@@ -41,6 +41,14 @@ export function useCreatePosts() {
 
 }
 
-export function useDeletePosts () {
-    
+export function useGetOwnerPosts(userId) {
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        (async () => {
+            const result = await postsAPI.getOwnerPosts(userId);
+            setPosts(result);
+        })()
+    }, [])
+    return [posts, setPosts];
 }

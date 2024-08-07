@@ -21,6 +21,7 @@ import PostEdit from './components/post-edit/PostEdit';
 import SiteGuardGuest from './components/common/SiteGuardGuest';
 import SiteGuardUser from './components/common/SiteGuardUser';
 import NotFound from './components/not-found/NotFound';
+import PostOwned from './components/post-owned/PostOwned';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
           <Route path='/catalog/edit/:postId' element={< PostEdit />} />
           <Route path='/create' element={<PostCreate />} />
           <Route path='/logout' element={<Logout />} />
+          <Route path='/my-posts' element={<PostOwned />} />
         </Route>
 
         <Route element={<SiteGuardUser />} >

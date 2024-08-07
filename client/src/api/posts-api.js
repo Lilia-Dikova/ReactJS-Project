@@ -18,6 +18,14 @@ const remove = (postId) => requester.del(`${BASE_URL}/${postId}`);
 
 const update = (postId, postData) => requester.put(`${BASE_URL}/${postId}`, postData)
 
+const getOwnerPosts = (id) => {
+    const params = new URLSearchParams({
+      where: `_ownerId="${id}"`,
+    });
+    return requester.get(`${BASE_URL}?${params.toString()}`);
+  };
+
+
 
 const postsAPI = {
     getAll,
@@ -25,6 +33,7 @@ const postsAPI = {
     create,
     remove,
     update,
+    getOwnerPosts
 }
 
 export default postsAPI;

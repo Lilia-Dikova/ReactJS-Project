@@ -19,7 +19,8 @@ export default function NavHeader() {
 
     if (isAuthenticated) {
         navigationUser = [
-            { name: 'Logout', href: '/logout' }
+            { name: 'Logout', href: '/logout' },
+            { name: 'My Posts', href: '/my-posts' }
         ];
         navigationPages.push({ name: 'Create', href: '/create' })
 
